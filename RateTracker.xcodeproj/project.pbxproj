@@ -11,6 +11,7 @@
 		49C2146322C4EC32004A1560 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146222C4EC32004A1560 /* Const.swift */; };
 		49C2146522C4ED05004A1560 /* SplashScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */; };
 		49C2146822C4EFA1004A1560 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146722C4EFA1004A1560 /* StoryboardHelper.swift */; };
+		49C2146A22C4F994004A1560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49C2146922C4F994004A1560 /* GoogleService-Info.plist */; };
 		49FFF19B22C4C82800322A78 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFF19A22C4C82800322A78 /* SplashPresenter.swift */; };
 		722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722364022201D97C009AD1E9 /* AppDelegate.swift */; };
 		722364052201D97C009AD1E9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722364042201D97C009AD1E9 /* SplashViewController.swift */; };
@@ -26,6 +27,7 @@
 		49C2146222C4EC32004A1560 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenRouter.swift; sourceTree = "<group>"; };
 		49C2146722C4EFA1004A1560 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		49C2146922C4F994004A1560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49FFF19A22C4C82800322A78 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		722363FF2201D97C009AD1E9 /* RateTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		722364022201D97C009AD1E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				49C2146122C4EC21004A1560 /* Global */,
 				722364022201D97C009AD1E9 /* AppDelegate.swift */,
 				7223640E2201D97E009AD1E9 /* Info.plist */,
+				49C2146922C4F994004A1560 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7223640D2201D97E009AD1E9 /* LaunchScreen.storyboard in Resources */,
+				49C2146A22C4F994004A1560 /* GoogleService-Info.plist in Resources */,
 				7223640A2201D97E009AD1E9 /* Assets.xcassets in Resources */,
 				722364082201D97D009AD1E9 /* SplashView.storyboard in Resources */,
 			);
@@ -259,13 +263,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -439,7 +447,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sitora.com.gcd.RateTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = "sitora.com.heart-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,7 +466,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sitora.com.gcd.RateTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = "sitora.com.heart-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
