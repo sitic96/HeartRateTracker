@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  RateTracker
+
+  Created by Sitora on 28/06/2019.
+  Copyright © 2019 Sitora Guliamova. All rights reserved.
+*/
+
+// MARK: - Global
+
+"OK" = "OK";
+
+// MARK: - Login
+
+"Incorrect email" = "Неверный адрес электронной почты";
+"Email or password is empty" = "Вы не ввели пароль или адрес электронной почты";
+"Password is too short" = "Слишком короткий пароль";
+
+// MARK: - Error handling
+
+"Error" = "Ошибка";
