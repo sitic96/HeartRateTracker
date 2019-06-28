@@ -93,7 +93,7 @@
                             <constraint firstItem="Duo-3H-1YQ" firstAttribute="trailing" secondItem="xbg-of-YJY" secondAttribute="trailing" id="hRI-d3-DXj"/>
                             <constraint firstItem="Duo-3H-1YQ" firstAttribute="top" secondItem="xbg-of-YJY" secondAttribute="bottom" constant="30" id="hVP-qe-A38"/>
                             <constraint firstItem="Duo-3H-1YQ" firstAttribute="leading" secondItem="xbg-of-YJY" secondAttribute="leading" id="mor-QS-vTu"/>
-                            <constraint firstItem="dLR-Q9-aCN" firstAttribute="height" secondItem="m3I-ZA-FpA" secondAttribute="height" multiplier="0.3" id="pIV-Ts-QAm"/>
+                            <constraint firstItem="dLR-Q9-aCN" firstAttribute="height" secondItem="m3I-ZA-FpA" secondAttribute="height" multiplier="0.3" priority="999" id="pIV-Ts-QAm"/>
                             <constraint firstItem="xbg-of-YJY" firstAttribute="width" secondItem="m3I-ZA-FpA" secondAttribute="width" multiplier="0.7" id="u5H-dM-UMd"/>
                             <constraint firstItem="pvb-e8-BXl" firstAttribute="trailing" secondItem="dLR-Q9-aCN" secondAttribute="trailing" id="uwg-Dw-CX5"/>
                             <constraint firstItem="dLR-Q9-aCN" firstAttribute="top" secondItem="Duo-3H-1YQ" secondAttribute="bottom" id="yPg-DZ-0GN"/>
