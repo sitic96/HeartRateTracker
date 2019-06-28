@@ -19,6 +19,8 @@
 		49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */; };
 		49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FE222C630F700F689C5 /* LocalizableKeys.swift */; };
 		49447FE722C6337600F689C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49447FE922C6337600F689C5 /* Localizable.strings */; };
+		49447FED22C6351600F689C5 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FEC22C6351600F689C5 /* String+localized.swift */; };
+		49447FEF22C637B100F689C5 /* LoginInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FEE22C637B100F689C5 /* LoginInjector.swift */; };
 		49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */; };
 		49C2146322C4EC32004A1560 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146222C4EC32004A1560 /* Const.swift */; };
 		49C2146522C4ED05004A1560 /* SplashScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */; };
@@ -49,6 +51,8 @@
 		49447FE822C6337600F689C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		49447FEA22C6339400F689C5 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		49447FEB22C633F600F689C5 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		49447FEC22C6351600F689C5 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		49447FEE22C637B100F689C5 /* LoginInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInjector.swift; sourceTree = "<group>"; };
 		49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenInjector.swift; sourceTree = "<group>"; };
 		49C2146222C4EC32004A1560 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenRouter.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				49447FCD22C5128C00F689C5 /* LoginViewController.swift */,
 				49447FCF22C513C400F689C5 /* LoginPresenter.swift */,
 				49447FD122C5145500F689C5 /* LoginRouter.swift */,
+				49447FEE22C637B100F689C5 /* LoginInjector.swift */,
 				49447FC522C5052F00F689C5 /* Login.storyboard */,
 			);
 			path = Login;
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */,
+				49447FEC22C6351600F689C5 /* String+localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,12 +421,14 @@
 				49447FCE22C5128C00F689C5 /* LoginViewController.swift in Sources */,
 				49FFF19B22C4C82800322A78 /* SplashPresenter.swift in Sources */,
 				722364052201D97C009AD1E9 /* SplashViewController.swift in Sources */,
+				49447FEF22C637B100F689C5 /* LoginInjector.swift in Sources */,
 				49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */,
 				49447FD022C513C400F689C5 /* LoginPresenter.swift in Sources */,
 				49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */,
 				722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */,
 				49447FD822C5178B00F689C5 /* CustomAlertViewController.swift in Sources */,
 				49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */,
+				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
 				49C2146322C4EC32004A1560 /* Const.swift in Sources */,
 				49447FCC22C50F1600F689C5 /* LogoView.swift in Sources */,
 				49447FD222C5145500F689C5 /* LoginRouter.swift in Sources */,

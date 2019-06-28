@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginViewProtocol {
+protocol LoginViewProtocol: AnyObject {
     var presenter: LoginPresenterProtocol! { get set }
 }
 

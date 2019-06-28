@@ -28,27 +28,27 @@ extension LoginPresenter: LoginPresenterProtocol {
                            password: String?) {
         guard let email = email,
             let password = password else {
-                router.showAlert(delegate: self,
+                router.showAlert(delegate: nil,
                                  type: .error,
-                                 title: "Error",
-                                 text: "Email or password is empty",
-                                 options: [AlertOption(text: "OK")])
+                                 title: LocalizableKeys.error.localized,
+                                 text: LocalizableKeys.emptyLoginFields.localized,
+                                 options: [AlertOption(text: LocalizableKeys.ok.localized)])
                 return
         }
         if !EmailValidator.validate(email: email,
                                     allowTopLevelDomains: true,
                                     allowInternational: true) {
-            router.showAlert(delegate: self,
+            router.showAlert(delegate: nil,
                              type: .error,
-                             title: "Error",
-                             text: "Incorrect email",
-                             options: [AlertOption(text: "OK")])
+                             title: LocalizableKeys.error.localized,
+                             text: LocalizableKeys.wrongEmail.localized,
+                             options: [AlertOption(text: LocalizableKeys.ok.localized)])
         } else if password.count < 6 {
-            router.showAlert(delegate: self,
+            router.showAlert(delegate: nil,
                              type: .error,
-                             title: "Error",
-                             text: "Password is too short",
-                             options: [AlertOption(text: "OK")])
+                             title: LocalizableKeys.error.localized,
+                             text: LocalizableKeys.shortPassword.localized,
+                             options: [AlertOption(text: LocalizableKeys.ok.localized)])
         } else {
             // data is ok, try to login
         }
@@ -56,11 +56,5 @@ extension LoginPresenter: LoginPresenterProtocol {
 
     func viewDidClickSignUp() {
         router.showSignUpVC()
-    }
-}
-
-extension LoginPresenter: CustomAlertDelegate {
-    func usedDidSelectOption(_ option: AlertOption) {
-
     }
 }

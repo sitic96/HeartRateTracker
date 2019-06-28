@@ -6,19 +6,21 @@
 //  Copyright © 2019 Sitora Guliamova. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol LoginRouterProtocol {
     func showMainVC()
     func showSignUpVC()
-    func showAlert(delegate: CustomAlertDelegate,
+    func showAlert(delegate: CustomAlertDelegate?,
                    type: AlertType,
                    title: String,
                    text: String,
                    options: [AlertOption])
 }
 
-struct LoginRouter { }
+struct LoginRouter {
+    weak var viewController: (UIViewController & LoginViewProtocol)?
+}
 
 extension LoginRouter: LoginRouterProtocol {
     func showMainVC() {
@@ -29,7 +31,7 @@ extension LoginRouter: LoginRouterProtocol {
 
     }
 
-    func showAlert(delegate: CustomAlertDelegate,
+    func showAlert(delegate: CustomAlertDelegate?,
                    type: AlertType,
                    title: String,
                    text: String,
@@ -40,5 +42,10 @@ extension LoginRouter: LoginRouterProtocol {
                           alertName: title,
                           alertText: text,
                           alertOptions: options)
+        alertVC.modalPresentationStyle = .overCurrentContext
+        alertVC.modalTransitionStyle = .crossDissolve
+        viewController?.present(alertVC,
+                                animated: true,
+                                completion: nil)
     }
 }

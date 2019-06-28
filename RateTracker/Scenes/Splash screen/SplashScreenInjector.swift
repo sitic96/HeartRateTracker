@@ -12,7 +12,7 @@ struct SplashScreenInjector {
     private init() { }
 
     static func inject<View: UIViewController & SplashScreenViewProtocol>(_ view: View) {
-        let splashRouter = SplashScreenRouter()
+        let splashRouter = SplashScreenRouter(viewController: view)
         let presenter = SplashPresenter(router: splashRouter)
         view.presenter = presenter
     }

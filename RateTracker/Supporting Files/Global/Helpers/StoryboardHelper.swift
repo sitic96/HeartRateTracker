@@ -15,4 +15,10 @@ struct StoryboardHelper {
     static func getInitialViewController() -> UIViewController? {
         return storyboard.instantiateInitialViewController()
     }
+
+    static func getLoginViewController() -> UIViewController? {
+        let loginStoryboard = UIStoryboard(name: "Login",
+                                                  bundle: Bundle.main)
+        return loginStoryboard.instantiateInitialViewController()
+    }
 }

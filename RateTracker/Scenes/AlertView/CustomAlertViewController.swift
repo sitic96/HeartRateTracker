@@ -63,6 +63,7 @@ extension CustomAlertViewController: CustomAlertViewProtocol {
                    alertName: String?,
                    alertText: String?,
                    alertOptions: [AlertOption]) {
+         _ = self.view
         self.delegate = delegate
         self.alertOptions = alertOptions
 
