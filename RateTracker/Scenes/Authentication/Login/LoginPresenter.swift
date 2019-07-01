@@ -9,6 +9,7 @@
 import Foundation
 
 protocol LoginPresenterProtocol {
+    var view: LoginViewProtocol? { get }
     var router: LoginRouterProtocol { get }
 
     func viewDidClickLogin(email: String?,
@@ -17,9 +18,12 @@ protocol LoginPresenterProtocol {
 }
 
 class LoginPresenter {
+    weak var view: LoginViewProtocol?
     var router: LoginRouterProtocol
 
-    init(router: LoginRouterProtocol) {
+    init(_ view: LoginViewProtocol,
+         router: LoginRouterProtocol) {
+        self.view = view
         self.router = router
     }
 }
@@ -28,7 +32,7 @@ extension LoginPresenter: LoginPresenterProtocol {
                            password: String?) {
         guard let email = email,
             let password = password else {
-                router.showAlert(delegate: nil,
+                view?.showAlert(delegate: nil,
                                  type: .error,
                                  title: LocalizableKeys.error.localized,
                                  text: LocalizableKeys.emptyLoginFields.localized,
@@ -38,13 +42,13 @@ extension LoginPresenter: LoginPresenterProtocol {
         if !EmailValidator.validate(email: email,
                                     allowTopLevelDomains: true,
                                     allowInternational: true) {
-            router.showAlert(delegate: nil,
+            view?.showAlert(delegate: nil,
                              type: .error,
                              title: LocalizableKeys.error.localized,
                              text: LocalizableKeys.wrongEmail.localized,
                              options: [AlertOption(text: LocalizableKeys.ok.localized)])
         } else if password.count < 6 {
-            router.showAlert(delegate: nil,
+            view?.showAlert(delegate: nil,
                              type: .error,
                              title: LocalizableKeys.error.localized,
                              text: LocalizableKeys.shortPassword.localized,

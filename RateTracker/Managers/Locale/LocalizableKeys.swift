@@ -17,6 +17,9 @@ enum LocalizableKeys {
     static let emptyLoginFields = "Email or password is empty"
     static let shortPassword = "Password is too short"
 
+    // MARK: - Sign Up
+    static let passwordNotMatch = "Passwords not match"
+
     // MARK: - Error handling
     static let error = "Error"
 }

@@ -11,11 +11,6 @@ import UIKit
 protocol LoginRouterProtocol {
     func showMainVC()
     func showSignUpVC()
-    func showAlert(delegate: CustomAlertDelegate?,
-                   type: AlertType,
-                   title: String,
-                   text: String,
-                   options: [AlertOption])
 }
 
 struct LoginRouter {
@@ -29,23 +24,5 @@ extension LoginRouter: LoginRouterProtocol {
 
     func showSignUpVC() {
 
-    }
-
-    func showAlert(delegate: CustomAlertDelegate?,
-                   type: AlertType,
-                   title: String,
-                   text: String,
-                   options: [AlertOption]) {
-        let alertVC = CustomAlertViewController.loadFromNib()
-        alertVC.setupInfo(delegate: delegate,
-                          type: type,
-                          alertName: title,
-                          alertText: text,
-                          alertOptions: options)
-        alertVC.modalPresentationStyle = .overCurrentContext
-        alertVC.modalTransitionStyle = .crossDissolve
-        viewController?.present(alertVC,
-                                animated: true,
-                                completion: nil)
     }
 }

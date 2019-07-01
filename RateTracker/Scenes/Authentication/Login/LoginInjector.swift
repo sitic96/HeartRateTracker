@@ -13,7 +13,8 @@ struct LoginInjector {
 
     static func inject<View: UIViewController & LoginViewProtocol>(_ view: View) {
         let loginRouter = LoginRouter(viewController: view)
-        let loginPresenter = LoginPresenter(router: loginRouter)
+        let loginPresenter = LoginPresenter(view,
+                                            router: loginRouter)
         view.presenter = loginPresenter
     }
 }

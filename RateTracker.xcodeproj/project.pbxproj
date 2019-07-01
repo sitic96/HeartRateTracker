@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4902035922CA0F3300561120 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4902035822CA0F3300561120 /* Authentication.storyboard */; };
 		4902035C22CA193A00561120 /* Styles.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4902035B22CA193A00561120 /* Styles.yaml */; };
+		4902035E22CA422C00561120 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902035D22CA422C00561120 /* SignUpViewController.swift */; };
+		4902036022CA426F00561120 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902035F22CA426F00561120 /* SignUpPresenter.swift */; };
+		4902036222CA428500561120 /* SignUpInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902036122CA428500561120 /* SignUpInjector.swift */; };
+		4902036422CA429100561120 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902036322CA429100561120 /* SignUpRouter.swift */; };
+		4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902036922CA4D1A00561120 /* UIViewController+customAlert.swift */; };
 		49447FC922C50EF800F689C5 /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49447FC822C50EF800F689C5 /* LogoView.xib */; };
 		49447FCC22C50F1600F689C5 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FCB22C50F1600F689C5 /* LogoView.swift */; };
 		49447FCE22C5128C00F689C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FCD22C5128C00F689C5 /* LoginViewController.swift */; };
@@ -40,6 +45,11 @@
 		2B8EBD2DC6868FA92751C40A /* Pods-RateTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateTracker.debug.xcconfig"; path = "Target Support Files/Pods-RateTracker/Pods-RateTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		4902035822CA0F3300561120 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		4902035B22CA193A00561120 /* Styles.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Styles.yaml; sourceTree = "<group>"; };
+		4902035D22CA422C00561120 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4902035F22CA426F00561120 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		4902036122CA428500561120 /* SignUpInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInjector.swift; sourceTree = "<group>"; };
+		4902036322CA429100561120 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		4902036922CA4D1A00561120 /* UIViewController+customAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+customAlert.swift"; sourceTree = "<group>"; };
 		49447FC822C50EF800F689C5 /* LogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
 		49447FCB22C50F1600F689C5 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		49447FCD22C5128C00F689C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +126,10 @@
 		49447FC422C5049B00F689C5 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				4902035D22CA422C00561120 /* SignUpViewController.swift */,
+				4902035F22CA426F00561120 /* SignUpPresenter.swift */,
+				4902036322CA429100561120 /* SignUpRouter.swift */,
+				4902036122CA428500561120 /* SignUpInjector.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 			children = (
 				49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */,
 				49447FEC22C6351600F689C5 /* String+localized.swift */,
+				4902036922CA4D1A00561120 /* UIViewController+customAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,13 +456,18 @@
 				722364052201D97C009AD1E9 /* SplashViewController.swift in Sources */,
 				49447FEF22C637B100F689C5 /* LoginInjector.swift in Sources */,
 				49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */,
+				4902036022CA426F00561120 /* SignUpPresenter.swift in Sources */,
+				4902035E22CA422C00561120 /* SignUpViewController.swift in Sources */,
 				49447FD022C513C400F689C5 /* LoginPresenter.swift in Sources */,
+				4902036422CA429100561120 /* SignUpRouter.swift in Sources */,
+				4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */,
 				49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */,
 				722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */,
 				49447FD822C5178B00F689C5 /* CustomAlertViewController.swift in Sources */,
 				49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */,
 				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
 				49C2146322C4EC32004A1560 /* Const.swift in Sources */,
+				4902036222CA428500561120 /* SignUpInjector.swift in Sources */,
 				49447FCC22C50F1600F689C5 /* LogoView.swift in Sources */,
 				49447FD222C5145500F689C5 /* LoginRouter.swift in Sources */,
 				49C2146822C4EFA1004A1560 /* StoryboardHelper.swift in Sources */,

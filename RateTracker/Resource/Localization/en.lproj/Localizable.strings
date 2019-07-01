@@ -16,6 +16,10 @@
 "Email or password is empty" = "Email or password is empty";
 "Password is too short" = "Password is too short";
 
+// MARK: - Sign Up
+
+"Passwords not match" = "Passwords not match";
+
 // MARK: - Error handling
 
 "Error" = "Error";

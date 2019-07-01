@@ -2,6 +2,7 @@ variables:
     # Colors
     blackColor: black
     whiteColor: white
+    greyColor: "C0C0C0"
 
 styles:
     blackView:
@@ -9,3 +10,5 @@ styles:
         tintColor: $whiteColor
     UILabel:
         textColor: $whiteColor
+    UILabel.whiteStyle:
+        textColor: $blackColor
