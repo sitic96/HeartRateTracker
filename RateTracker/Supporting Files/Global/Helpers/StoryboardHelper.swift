@@ -17,7 +17,7 @@ struct StoryboardHelper {
     }
 
     static func getLoginViewController() -> UIViewController? {
-        let loginStoryboard = UIStoryboard(name: "Login",
+        let loginStoryboard = UIStoryboard(name: "Authentication",
                                                   bundle: Bundle.main)
         return loginStoryboard.instantiateInitialViewController()
     }

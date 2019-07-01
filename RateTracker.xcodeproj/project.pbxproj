@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49447FC622C5052F00F689C5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49447FC522C5052F00F689C5 /* Login.storyboard */; };
+		4902035922CA0F3300561120 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4902035822CA0F3300561120 /* Authentication.storyboard */; };
+		4902035C22CA193A00561120 /* Styles.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 4902035B22CA193A00561120 /* Styles.yaml */; };
 		49447FC922C50EF800F689C5 /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49447FC822C50EF800F689C5 /* LogoView.xib */; };
 		49447FCC22C50F1600F689C5 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FCB22C50F1600F689C5 /* LogoView.swift */; };
 		49447FCE22C5128C00F689C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FCD22C5128C00F689C5 /* LoginViewController.swift */; };
@@ -37,7 +38,8 @@
 
 /* Begin PBXFileReference section */
 		2B8EBD2DC6868FA92751C40A /* Pods-RateTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateTracker.debug.xcconfig"; path = "Target Support Files/Pods-RateTracker/Pods-RateTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		49447FC522C5052F00F689C5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4902035822CA0F3300561120 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		4902035B22CA193A00561120 /* Styles.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Styles.yaml; sourceTree = "<group>"; };
 		49447FC822C50EF800F689C5 /* LogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
 		49447FCB22C50F1600F689C5 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		49447FCD22C5128C00F689C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -82,9 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4902035A22CA173400561120 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				4902035B22CA193A00561120 /* Styles.yaml */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		49447FC222C5047100F689C5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				4902035822CA0F3300561120 /* Authentication.storyboard */,
 				49447FC422C5049B00F689C5 /* SignUp */,
 				49447FC322C5049000F689C5 /* Login */,
 			);
@@ -98,7 +109,6 @@
 				49447FCF22C513C400F689C5 /* LoginPresenter.swift */,
 				49447FD122C5145500F689C5 /* LoginRouter.swift */,
 				49447FEE22C637B100F689C5 /* LoginInjector.swift */,
-				49447FC522C5052F00F689C5 /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -243,6 +253,7 @@
 		722364162201D9C2009AD1E9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4902035A22CA173400561120 /* Themes */,
 				49447FE422C632ED00F689C5 /* Localization */,
 				7223640B2201D97E009AD1E9 /* LaunchScreen.storyboard */,
 				722364172201D9D1009AD1E9 /* Assets */,
@@ -349,11 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7223640D2201D97E009AD1E9 /* LaunchScreen.storyboard in Resources */,
+				4902035C22CA193A00561120 /* Styles.yaml in Resources */,
 				49C2146A22C4F994004A1560 /* GoogleService-Info.plist in Resources */,
 				49447FD922C5178B00F689C5 /* CustomAlertViewController.xib in Resources */,
 				7223640A2201D97E009AD1E9 /* Assets.xcassets in Resources */,
-				49447FC622C5052F00F689C5 /* Login.storyboard in Resources */,
 				49447FE722C6337600F689C5 /* Localizable.strings in Resources */,
+				4902035922CA0F3300561120 /* Authentication.storyboard in Resources */,
 				722364082201D97D009AD1E9 /* SplashView.storyboard in Resources */,
 				49447FC922C50EF800F689C5 /* LogoView.xib in Resources */,
 			);
@@ -394,7 +406,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KZFileWatchers/KZFileWatchers.framework",
+				"${BUILT_PRODUCTS_DIR}/Stylist/Stylist.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -402,7 +417,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KZFileWatchers.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stylist.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

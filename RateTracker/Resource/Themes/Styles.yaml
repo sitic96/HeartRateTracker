@@ -1,0 +1,11 @@
+variables:
+    # Colors
+    blackColor: black
+    whiteColor: white
+
+styles:
+    blackView:
+        backgroundColor: $blackColor
+        tintColor: $whiteColor
+    UILabel:
+        textColor: $whiteColor
