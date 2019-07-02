@@ -33,6 +33,7 @@
 		49BF32BD22CB59E4005FC8D8 /* SignUpOfferPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32BC22CB59E4005FC8D8 /* SignUpOfferPresenter.swift */; };
 		49BF32BF22CB5AA2005FC8D8 /* SignUpOfferRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32BE22CB5AA2005FC8D8 /* SignUpOfferRouter.swift */; };
 		49BF32C122CB5F87005FC8D8 /* SignUpOfferInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32C022CB5F87005FC8D8 /* SignUpOfferInjector.swift */; };
+		49BF32C422CB72D1005FC8D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32C322CB72D1005FC8D8 /* User.swift */; };
 		49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */; };
 		49C2146322C4EC32004A1560 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146222C4EC32004A1560 /* Const.swift */; };
 		49C2146522C4ED05004A1560 /* SplashScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */; };
@@ -77,6 +78,7 @@
 		49BF32BC22CB59E4005FC8D8 /* SignUpOfferPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferPresenter.swift; sourceTree = "<group>"; };
 		49BF32BE22CB5AA2005FC8D8 /* SignUpOfferRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferRouter.swift; sourceTree = "<group>"; };
 		49BF32C022CB5F87005FC8D8 /* SignUpOfferInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferInjector.swift; sourceTree = "<group>"; };
+		49BF32C322CB72D1005FC8D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenInjector.swift; sourceTree = "<group>"; };
 		49C2146222C4EC32004A1560 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenRouter.swift; sourceTree = "<group>"; };
@@ -235,6 +237,14 @@
 			path = SignUpOffer;
 			sourceTree = "<group>";
 		};
+		49BF32C222CB72C7005FC8D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49BF32C322CB72D1005FC8D8 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		49C2146122C4EC21004A1560 /* Global */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +309,7 @@
 		722364012201D97C009AD1E9 /* RateTracker */ = {
 			isa = PBXGroup;
 			children = (
+				49BF32C222CB72C7005FC8D8 /* Model */,
 				49BF32B422CB5586005FC8D8 /* Gateways */,
 				4902036B22CB539200561120 /* Use Cases */,
 				49FFF19722C4C37E00322A78 /* Scenes */,
@@ -463,6 +474,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/KZFileWatchers/KZFileWatchers.framework",
 				"${BUILT_PRODUCTS_DIR}/Stylist/Stylist.framework",
@@ -474,6 +486,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KZFileWatchers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stylist.framework",
@@ -501,6 +514,7 @@
 				49447FEF22C637B100F689C5 /* LoginInjector.swift in Sources */,
 				49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */,
 				4902036022CA426F00561120 /* SignUpPresenter.swift in Sources */,
+				49BF32C422CB72D1005FC8D8 /* User.swift in Sources */,
 				4902035E22CA422C00561120 /* SignUpViewController.swift in Sources */,
 				49447FD022C513C400F689C5 /* LoginPresenter.swift in Sources */,
 				49BF32C122CB5F87005FC8D8 /* SignUpOfferInjector.swift in Sources */,

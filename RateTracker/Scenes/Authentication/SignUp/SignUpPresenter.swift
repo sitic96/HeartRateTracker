@@ -21,10 +21,14 @@ class SignUpPresenter {
     weak var view: SignUpViewProtocol?
     var router: SignUpRouterProtocol
 
+    private var authUseCase: AuthenticationUseCaseProtocol
+
     init(_ view: SignUpViewProtocol,
-         router: SignUpRouterProtocol) {
+         router: SignUpRouterProtocol,
+        authUseCase: AuthenticationUseCaseProtocol) {
         self.view = view
         self.router = router
+        self.authUseCase = authUseCase
     }
 }
 
@@ -63,7 +67,18 @@ extension SignUpPresenter: SignUpPresenterProtocol {
                             text: LocalizableKeys.shortPassword.localized,
                             options: [AlertOption(text: LocalizableKeys.ok.localized)])
         } else {
-            // Data is ok
+            authUseCase.signup(with: email, password: password) { [weak self] result in
+                switch result {
+                case .success:
+                    self?.router.showMainVC()
+                case .failure(let error):
+                    self?.view?.showAlert(delegate: nil,
+                                    type: .error,
+                                    title: LocalizableKeys.error.localized,
+                                    text: error.localizedDescription,
+                                    options: [AlertOption(text: LocalizableKeys.ok.localized)])
+                }
+            }
         }
     }
 }

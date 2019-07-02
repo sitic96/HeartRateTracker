@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         setupFirebase()
-        setupStylist()
+        //setupStylist()
         if let splashViewController = StoryboardHelper.getInitialViewController() as? SplashViewController {
 
             SplashScreenInjector.inject(splashViewController)

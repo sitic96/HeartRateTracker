@@ -13,8 +13,11 @@ struct SignUpInjector {
 
     static func inject<View: UIViewController & SignUpViewProtocol>(_ view: View) {
         let signUpRouter = SignUpRouter()
+        let authGateway = AuthenticationGateway()
+        let authUseCase = AuthenticationUseCase(authenticationGateway: authGateway)
         let signUpPresenter = SignUpPresenter(view,
-                                              router: signUpRouter)
+                                              router: signUpRouter,
+                                              authUseCase: authUseCase)
         view.presenter = signUpPresenter
     }
 }

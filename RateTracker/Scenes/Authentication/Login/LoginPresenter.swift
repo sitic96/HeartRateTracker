@@ -20,10 +20,14 @@ class LoginPresenter {
     weak var view: LoginViewProtocol?
     var router: LoginRouterProtocol
 
+    private let authUseCase: AuthenticationUseCaseProtocol
+
     init(_ view: LoginViewProtocol,
-         router: LoginRouterProtocol) {
+         router: LoginRouterProtocol,
+         authUseCase: AuthenticationUseCaseProtocol) {
         self.view = view
         self.router = router
+        self.authUseCase = authUseCase
     }
 }
 extension LoginPresenter: LoginPresenterProtocol {
@@ -53,7 +57,18 @@ extension LoginPresenter: LoginPresenterProtocol {
                              text: LocalizableKeys.shortPassword.localized,
                              options: [AlertOption(text: LocalizableKeys.ok.localized)])
         } else {
-            // data is ok, try to login
+            authUseCase.login(with: email, password: password) { [weak self] result in
+                switch result {
+                case .success:
+                    self?.router.showMainVC()
+                case .failure:
+                    self?.view?.showAlert(delegate: nil,
+                                          type: .error,
+                                          title: LocalizableKeys.error.localized,
+                                          text: LocalizableKeys.loginError.localized,
+                                          options: [AlertOption(text: LocalizableKeys.ok.localized)])
+                }
+            }
         }
     }
 }

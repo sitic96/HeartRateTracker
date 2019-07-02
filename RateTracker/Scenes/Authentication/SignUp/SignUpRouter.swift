@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SignUpRouterProtocol {
-    
+    func showMainVC()
 }
 
 struct SignUpRouter {
@@ -17,5 +17,7 @@ struct SignUpRouter {
 }
 
 extension SignUpRouter: SignUpRouterProtocol {
-    
+    func showMainVC() {
+        
+    }
 }

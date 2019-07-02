@@ -15,6 +15,7 @@
 "Incorrect email" = "Incorrect email";
 "Email or password is empty" = "Email or password is empty";
 "Password is too short" = "Password is too short";
+"Login failed, checl your data and try again" = "Login failed, checl your data and try again";
 
 // MARK: - Sign Up
 

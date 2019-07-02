@@ -8,6 +8,7 @@ target 'RateTracker' do
   # Pods for RateTracker
 	pod 'SwiftGifOrigin', '~> 1.7.0'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
   pod 'Stylist'
 
 end
