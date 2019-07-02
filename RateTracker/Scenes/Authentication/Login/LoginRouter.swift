@@ -10,7 +10,7 @@ import UIKit
 
 protocol LoginRouterProtocol {
     func showMainVC()
-    func showSignUpVC()
+    func prepare(for segue: UIStoryboardSegue?)
 }
 
 struct LoginRouter {
@@ -18,11 +18,17 @@ struct LoginRouter {
 }
 
 extension LoginRouter: LoginRouterProtocol {
-    func showMainVC() {
+    func prepare(for segue: UIStoryboardSegue?) {
+        guard let segue = segue else {
+            return
+        }
 
+        if let controller = segue.destination as? SignUpOfferViewController {
+            SignUpOfferInjector.inject(controller)
+        }
     }
 
-    func showSignUpVC() {
+    func showMainVC() {
 
     }
 }

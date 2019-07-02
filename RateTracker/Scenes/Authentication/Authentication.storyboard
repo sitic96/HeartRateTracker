@@ -63,7 +63,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="userDidClickSignUp:" destination="nm2-uY-cC2" eventType="touchUpInside" id="NxL-ST-QEC"/>
                                             <segue destination="lI7-wo-loJ" kind="presentation" modalTransitionStyle="flipHorizontal" id="T73-sC-24n"/>
                                         </connections>
                                     </button>
@@ -115,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="685" y="-415"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Offer View Controller-->
         <scene sceneID="fuH-ta-OJz">
             <objects>
-                <viewController id="lI7-wo-loJ" sceneMemberID="viewController">
+                <viewController id="lI7-wo-loJ" customClass="SignUpOfferViewController" customModule="RateTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WK3-C2-TG9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +139,7 @@
                                 <rect key="frame" x="150.66666666666666" y="558.33333333333337" width="30" height="30"/>
                                 <state key="normal" title="Yes"/>
                                 <connections>
-                                    <segue destination="uq2-i6-1zl" kind="show" id="x2l-dy-GX2"/>
+                                    <segue destination="uq2-i6-1zl" kind="show" identifier="signUpOfferToSignUp" id="x2l-dy-GX2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTc-gY-1jF">

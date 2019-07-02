@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SignUpViewProtocol: CommonViewProtocol {
-    var presenter: SignUpPresenterProtocol! { get }
+    var presenter: SignUpPresenterProtocol! { get set }
 }
 
 class SignUpViewController: UIViewController {

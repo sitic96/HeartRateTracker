@@ -15,3 +15,7 @@ protocol SignUpRouterProtocol {
 struct SignUpRouter {
 
 }
+
+extension SignUpRouter: SignUpRouterProtocol {
+    
+}

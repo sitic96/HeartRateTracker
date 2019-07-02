@@ -13,18 +13,18 @@ protocol LoginViewProtocol: CommonViewProtocol {
 }
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var emailAddressTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet private weak var emailAddressTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
 
     var presenter: LoginPresenterProtocol!
-
-    @IBAction func userDidClickSignUp(_ sender: Any) {
-        presenter.viewDidClickSignUp()
-    }
 
     @IBAction func userDidClickLogin(_ sender: UIButton) {
         presenter.viewDidClickLogin(email: emailAddressTextField.text,
                                     password: passwordTextField.text)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        presenter.router.prepare(for: segue)
     }
 }
 

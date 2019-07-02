@@ -14,7 +14,6 @@ protocol LoginPresenterProtocol {
 
     func viewDidClickLogin(email: String?,
                            password: String?)
-    func viewDidClickSignUp()
 }
 
 class LoginPresenter {
@@ -56,9 +55,5 @@ extension LoginPresenter: LoginPresenterProtocol {
         } else {
             // data is ok, try to login
         }
-    }
-
-    func viewDidClickSignUp() {
-        router.showSignUpVC()
     }
 }

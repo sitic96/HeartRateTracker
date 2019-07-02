@@ -27,6 +27,12 @@
 		49447FE722C6337600F689C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49447FE922C6337600F689C5 /* Localizable.strings */; };
 		49447FED22C6351600F689C5 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FEC22C6351600F689C5 /* String+localized.swift */; };
 		49447FEF22C637B100F689C5 /* LoginInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FEE22C637B100F689C5 /* LoginInjector.swift */; };
+		49BF32B322CB545D005FC8D8 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B222CB545D005FC8D8 /* AuthenticationUseCase.swift */; };
+		49BF32B622CB562A005FC8D8 /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */; };
+		49BF32B922CB5887005FC8D8 /* SignUpOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B822CB5887005FC8D8 /* SignUpOfferViewController.swift */; };
+		49BF32BD22CB59E4005FC8D8 /* SignUpOfferPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32BC22CB59E4005FC8D8 /* SignUpOfferPresenter.swift */; };
+		49BF32BF22CB5AA2005FC8D8 /* SignUpOfferRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32BE22CB5AA2005FC8D8 /* SignUpOfferRouter.swift */; };
+		49BF32C122CB5F87005FC8D8 /* SignUpOfferInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32C022CB5F87005FC8D8 /* SignUpOfferInjector.swift */; };
 		49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */; };
 		49C2146322C4EC32004A1560 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146222C4EC32004A1560 /* Const.swift */; };
 		49C2146522C4ED05004A1560 /* SplashScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */; };
@@ -65,6 +71,12 @@
 		49447FEB22C633F600F689C5 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		49447FEC22C6351600F689C5 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		49447FEE22C637B100F689C5 /* LoginInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInjector.swift; sourceTree = "<group>"; };
+		49BF32B222CB545D005FC8D8 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
+		49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
+		49BF32B822CB5887005FC8D8 /* SignUpOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferViewController.swift; sourceTree = "<group>"; };
+		49BF32BC22CB59E4005FC8D8 /* SignUpOfferPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferPresenter.swift; sourceTree = "<group>"; };
+		49BF32BE22CB5AA2005FC8D8 /* SignUpOfferRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferRouter.swift; sourceTree = "<group>"; };
+		49BF32C022CB5F87005FC8D8 /* SignUpOfferInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferInjector.swift; sourceTree = "<group>"; };
 		49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenInjector.swift; sourceTree = "<group>"; };
 		49C2146222C4EC32004A1560 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenRouter.swift; sourceTree = "<group>"; };
@@ -102,12 +114,21 @@
 			path = Themes;
 			sourceTree = "<group>";
 		};
+		4902036B22CB539200561120 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				49BF32B222CB545D005FC8D8 /* AuthenticationUseCase.swift */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
 		49447FC222C5047100F689C5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				4902035822CA0F3300561120 /* Authentication.storyboard */,
-				49447FC422C5049B00F689C5 /* SignUp */,
 				49447FC322C5049000F689C5 /* Login */,
+				49447FC422C5049B00F689C5 /* SignUp */,
+				49BF32B722CB5842005FC8D8 /* SignUpOffer */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -175,7 +196,8 @@
 			children = (
 				49447FE122C630D700F689C5 /* Locale */,
 			);
-			path = Managers;
+			name = Managers;
+			path = ../../Managers;
 			sourceTree = "<group>";
 		};
 		49447FE122C630D700F689C5 /* Locale */ = {
@@ -194,9 +216,29 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		49BF32B422CB5586005FC8D8 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		49BF32B722CB5842005FC8D8 /* SignUpOffer */ = {
+			isa = PBXGroup;
+			children = (
+				49BF32B822CB5887005FC8D8 /* SignUpOfferViewController.swift */,
+				49BF32BC22CB59E4005FC8D8 /* SignUpOfferPresenter.swift */,
+				49BF32BE22CB5AA2005FC8D8 /* SignUpOfferRouter.swift */,
+				49BF32C022CB5F87005FC8D8 /* SignUpOfferInjector.swift */,
+			);
+			path = SignUpOffer;
+			sourceTree = "<group>";
+		};
 		49C2146122C4EC21004A1560 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				49447FE022C630CA00F689C5 /* Managers */,
 				49447FDD22C6270000F689C5 /* Extensions */,
 				49C2146622C4EF93004A1560 /* Helpers */,
 				49C2146222C4EC32004A1560 /* Const.swift */,
@@ -257,7 +299,8 @@
 		722364012201D97C009AD1E9 /* RateTracker */ = {
 			isa = PBXGroup;
 			children = (
-				49447FE022C630CA00F689C5 /* Managers */,
+				49BF32B422CB5586005FC8D8 /* Gateways */,
+				4902036B22CB539200561120 /* Use Cases */,
 				49FFF19722C4C37E00322A78 /* Scenes */,
 				722364162201D9C2009AD1E9 /* Resource */,
 				722364182201D9E1009AD1E9 /* Supporting Files */,
@@ -453,18 +496,24 @@
 				49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */,
 				49447FCE22C5128C00F689C5 /* LoginViewController.swift in Sources */,
 				49FFF19B22C4C82800322A78 /* SplashPresenter.swift in Sources */,
+				49BF32BF22CB5AA2005FC8D8 /* SignUpOfferRouter.swift in Sources */,
 				722364052201D97C009AD1E9 /* SplashViewController.swift in Sources */,
 				49447FEF22C637B100F689C5 /* LoginInjector.swift in Sources */,
 				49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */,
 				4902036022CA426F00561120 /* SignUpPresenter.swift in Sources */,
 				4902035E22CA422C00561120 /* SignUpViewController.swift in Sources */,
 				49447FD022C513C400F689C5 /* LoginPresenter.swift in Sources */,
+				49BF32C122CB5F87005FC8D8 /* SignUpOfferInjector.swift in Sources */,
+				49BF32B322CB545D005FC8D8 /* AuthenticationUseCase.swift in Sources */,
 				4902036422CA429100561120 /* SignUpRouter.swift in Sources */,
+				49BF32BD22CB59E4005FC8D8 /* SignUpOfferPresenter.swift in Sources */,
 				4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */,
+				49BF32B922CB5887005FC8D8 /* SignUpOfferViewController.swift in Sources */,
 				49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */,
 				722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */,
 				49447FD822C5178B00F689C5 /* CustomAlertViewController.swift in Sources */,
 				49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */,
+				49BF32B622CB562A005FC8D8 /* AuthenticationGateway.swift in Sources */,
 				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
 				49C2146322C4EC32004A1560 /* Const.swift in Sources */,
 				4902036222CA428500561120 /* SignUpInjector.swift in Sources */,
