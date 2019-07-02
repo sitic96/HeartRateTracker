@@ -221,6 +221,7 @@
 		49BF32B422CB5586005FC8D8 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				4902036B22CB539200561120 /* Use Cases */,
 				49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */,
 			);
 			path = Gateways;
@@ -311,7 +312,6 @@
 			children = (
 				49BF32C222CB72C7005FC8D8 /* Model */,
 				49BF32B422CB5586005FC8D8 /* Gateways */,
-				4902036B22CB539200561120 /* Use Cases */,
 				49FFF19722C4C37E00322A78 /* Scenes */,
 				722364162201D9C2009AD1E9 /* Resource */,
 				722364182201D9E1009AD1E9 /* Supporting Files */,
