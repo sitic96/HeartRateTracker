@@ -15,6 +15,7 @@ protocol AuthenticationUseCaseProtocol {
     func signup(with login: String,
                 password: String,
                 completion: @escaping UserCompletionHandler)
+    func userDidRejectSignUp()
 }
 
 class AuthenticationUseCase {
@@ -36,5 +37,9 @@ extension AuthenticationUseCase: AuthenticationUseCaseProtocol {
                 password: String,
                 completion: @escaping UserCompletionHandler) {
         authenticationGateway.signup(with: login, password: password, completion: completion)
+    }
+
+    func userDidRejectSignUp() {
+        authenticationGateway.userDidRejectSignUp()
     }
 }

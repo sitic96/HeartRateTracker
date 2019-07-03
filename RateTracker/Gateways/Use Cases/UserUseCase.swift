@@ -10,6 +10,7 @@ import Foundation
 
 protocol UserUseCaseProtocol {
     var isUserFirstLaunchApp: Bool { get }
+    var currentUser: User { get }
 }
 
 class UserUseCase {
@@ -23,7 +24,14 @@ class UserUseCase {
 extension UserUseCase: UserUseCaseProtocol {
     var isUserFirstLaunchApp: Bool {
         get {
-            return userGateway.isUserFirstAppLaunch()
+            return userGateway.isUserFirstAppLaunch
         }
     }
+
+    var currentUser: User {
+        get {
+            return userGateway.currentUser
+        }
+    }
+
 }

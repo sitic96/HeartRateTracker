@@ -10,16 +10,23 @@ import Foundation
 
 protocol SignUpOfferPresenterProtocol {
     var router: SignUpOfferRouterProtocol { get }
+
+    func userDidRejectSignUp()
 }
 
 class SignUpOfferPresenter {
     var router: SignUpOfferRouterProtocol
+    private let authUseCase: AuthenticationUseCaseProtocol
 
-    init(router: SignUpOfferRouterProtocol) {
+    init(router: SignUpOfferRouterProtocol,
+         authUseCase: AuthenticationUseCaseProtocol) {
         self.router = router
+        self.authUseCase = authUseCase
     }
 }
 
 extension SignUpOfferPresenter: SignUpOfferPresenterProtocol {
-    
+    func userDidRejectSignUp() {
+        authUseCase.userDidRejectSignUp()
+    }
 }

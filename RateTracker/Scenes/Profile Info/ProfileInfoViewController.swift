@@ -9,7 +9,9 @@
 import UIKit
 
 protocol ProfileInfoViewProtocol: CommonViewProtocol {
-    var presenter: ProfileInfoPresenterProtocol! { get set}
+    var presenter: ProfileInfoPresenterProtocol! { get set }
+
+    func fillInfo(for user: User)
 }
 
 class ProfileInfoViewController: UIViewController {
@@ -25,13 +27,23 @@ class ProfileInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+
+        presenter.viewWillAppear()
     }
     
-    
     @IBAction func userDidSelectChangeProfile(_ sender: UIButton) {
+        presenter.viewDidSelectEditInfo()
     }
 }
 
 extension ProfileInfoViewController: ProfileInfoViewProtocol {
-    
+    func fillInfo(for user: User) {
+        
+    }
 }

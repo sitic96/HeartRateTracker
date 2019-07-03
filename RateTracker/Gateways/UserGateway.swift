@@ -9,7 +9,8 @@
 import Foundation
 
 protocol UserGatewayProtocol {
-    func isUserFirstAppLaunch() -> Bool
+    var isUserFirstAppLaunch: Bool { get }
+    var currentUser: User { get }
 }
 
 class UserGateway {
@@ -21,7 +22,15 @@ class UserGateway {
 }
 
 extension UserGateway: UserGatewayProtocol {
-    func isUserFirstAppLaunch() -> Bool {
-        return session.isUserFirstLaunch
+    var isUserFirstAppLaunch: Bool {
+        get {
+            return session.isUserFirstLaunch
+        }
+    }
+
+    var currentUser: User {
+        get {
+            return session.currentUser
+        }
     }
 }

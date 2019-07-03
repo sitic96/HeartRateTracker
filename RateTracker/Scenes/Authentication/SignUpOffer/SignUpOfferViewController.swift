@@ -24,6 +24,10 @@ class SignUpOfferViewController: UIViewController {
         presenter.router.prepare(for: segue)
     }
 
+    @IBAction func userDidRejectSignUp(_ sender: Any) {
+        presenter.userDidRejectSignUp()
+    }
+
 }
 
 extension SignUpOfferViewController: SignUpOfferViewProtocol {

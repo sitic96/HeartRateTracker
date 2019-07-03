@@ -12,7 +12,7 @@ protocol ProfileInfoPresenterProtocol {
     var router: ProfileInfoRouterProtocol { get }
 
     func viewDidLoad()
-    func viewWillAppear(_ view: ProfileInfoViewProtocol)
+    func viewWillAppear()
 
     func viewDidSelectEditInfo()
 }
@@ -38,8 +38,8 @@ extension ProfileInfoPresenter: ProfileInfoPresenterProtocol {
         }
     }
 
-    func viewWillAppear(_ view: ProfileInfoViewProtocol) {
-
+    func viewWillAppear() {
+        view?.fillInfo(for: userUseCase.currentUser)
     }
 
     func viewDidSelectEditInfo() {

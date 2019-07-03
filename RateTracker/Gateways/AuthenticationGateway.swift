@@ -31,7 +31,8 @@ class AuthenticationGateway {
         self.coreData = coreData
     }
 
-    private func userDidLaunchAppFirstTime() {
+    private func userDidLaunchAppFirstTime(user: User) {
+        session.currentUser = user
         session.isUserFirstLaunch = true
     }
 
@@ -78,13 +79,12 @@ extension AuthenticationGateway: AuthenticationGatewayProtocol {
             } else {
                 if let user = authResult?.user {
                     let appUser = User(email: user.email)
-                    self?.userDidLaunchAppFirstTime()
+                    self?.userDidLaunchAppFirstTime(user: appUser)
                     do {
                         try self?.save(user: appUser)
                     } catch let error {
                         completion(.failure(error))
                     }
-                    self?.session.currentUser = appUser
                     completion(.success(appUser))
                 }
             }
@@ -92,6 +92,7 @@ extension AuthenticationGateway: AuthenticationGatewayProtocol {
     }
 
     func userDidRejectSignUp() {
-        userDidLaunchAppFirstTime()
+        // TODO: replace in future for non register user
+        userDidLaunchAppFirstTime(user: User(email: nil))
     }
 }

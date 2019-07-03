@@ -13,11 +13,16 @@ protocol ProfileInfoRouterProtocol {
 }
 
 struct ProfileInfoRouter {
+    weak var viewController: (UIViewController & ProfileInfoViewProtocol)?
 
 }
 
 extension ProfileInfoRouter: ProfileInfoRouterProtocol {
     func showEditProfileVC() {
-        
+        guard let vc = StoryboardHelper.getEditProfileViewController(),
+            let editViewController = vc as? EditProfileViewController else {
+                return
+        }
+        viewController?.navigationController?.pushViewController(editViewController, animated: false)
     }
 }

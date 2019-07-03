@@ -33,6 +33,8 @@
 		4972A68322CCC06F007971E2 /* CoreUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68222CCC06F007971E2 /* CoreUser.swift */; };
 		4972A68622CCC94D007971E2 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68522CCC94D007971E2 /* UserError.swift */; };
 		4972A68A22CCCDC6007971E2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68922CCCDC6007971E2 /* CoreDataManager.swift */; };
+		4972A68D22CCE54C007971E2 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68C22CCE54C007971E2 /* EditProfileViewController.swift */; };
+		4972A68F22CCE862007971E2 /* ProfileInfoInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68E22CCE862007971E2 /* ProfileInfoInjector.swift */; };
 		49BF32B322CB545D005FC8D8 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B222CB545D005FC8D8 /* AuthenticationUseCase.swift */; };
 		49BF32B622CB562A005FC8D8 /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */; };
 		49BF32B922CB5887005FC8D8 /* SignUpOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B822CB5887005FC8D8 /* SignUpOfferViewController.swift */; };
@@ -90,6 +92,8 @@
 		4972A68222CCC06F007971E2 /* CoreUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUser.swift; sourceTree = "<group>"; };
 		4972A68522CCC94D007971E2 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		4972A68922CCCDC6007971E2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		4972A68C22CCE54C007971E2 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		4972A68E22CCE862007971E2 /* ProfileInfoInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoInjector.swift; sourceTree = "<group>"; };
 		49BF32B222CB545D005FC8D8 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
 		49BF32B822CB5887005FC8D8 /* SignUpOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferViewController.swift; sourceTree = "<group>"; };
@@ -295,6 +299,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		4972A68B22CCE52C007971E2 /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4972A68C22CCE54C007971E2 /* EditProfileViewController.swift */,
+			);
+			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
 		49BF32B422CB5586005FC8D8 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,10 +340,12 @@
 		49BF32C522CB86B8005FC8D8 /* Profile Info */ = {
 			isa = PBXGroup;
 			children = (
-				49BF32C622CB86F4005FC8D8 /* ProfileInfoViewController.swift */,
 				49BF32C822CCA5D6005FC8D8 /* ProfileInfo.storyboard */,
+				4972A68B22CCE52C007971E2 /* Edit Profile */,
+				49BF32C622CB86F4005FC8D8 /* ProfileInfoViewController.swift */,
 				49BF32CA22CCBAE9005FC8D8 /* ProfileInfoPresenter.swift */,
 				49BF32CC22CCBB77005FC8D8 /* ProfileInfoRouter.swift */,
+				4972A68E22CCE862007971E2 /* ProfileInfoInjector.swift */,
 			);
 			path = "Profile Info";
 			sourceTree = "<group>";
@@ -608,6 +622,7 @@
 				4972A68022CCBF83007971E2 /* RateTracker.xcdatamodeld in Sources */,
 				49FFF19B22C4C82800322A78 /* SplashPresenter.swift in Sources */,
 				49BF32BF22CB5AA2005FC8D8 /* SignUpOfferRouter.swift in Sources */,
+				4972A68D22CCE54C007971E2 /* EditProfileViewController.swift in Sources */,
 				722364052201D97C009AD1E9 /* SplashViewController.swift in Sources */,
 				49447FEF22C637B100F689C5 /* LoginInjector.swift in Sources */,
 				49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */,
@@ -615,6 +630,7 @@
 				4972A68322CCC06F007971E2 /* CoreUser.swift in Sources */,
 				4902036022CA426F00561120 /* SignUpPresenter.swift in Sources */,
 				49BF32C422CB72D1005FC8D8 /* User.swift in Sources */,
+				4972A68F22CCE862007971E2 /* ProfileInfoInjector.swift in Sources */,
 				4902035E22CA422C00561120 /* SignUpViewController.swift in Sources */,
 				4972A67A22CCBD60007971E2 /* SessionManager.swift in Sources */,
 				49447FD022C513C400F689C5 /* LoginPresenter.swift in Sources */,

@@ -148,6 +148,7 @@
                                 <rect key="frame" x="233.33333333333334" y="558.33333333333337" width="30.000000000000028" height="30"/>
                                 <state key="normal" title="No"/>
                                 <connections>
+                                    <action selector="userDidRejectSignUp:" destination="lI7-wo-loJ" eventType="touchUpInside" id="g0k-EH-weQ"/>
                                     <segue destination="lo1-rh-wrG" kind="show" id="NmB-8h-9hs"/>
                                 </connections>
                             </button>
@@ -202,8 +203,8 @@
         <!--ProfileInfo-->
         <scene sceneID="azf-kx-YWF">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfileInfo" id="lo1-rh-wrG" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFw-M2-sF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ProfileInfo" id="lo1-rh-wrG" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="2227" y="-251"/>
         </scene>
