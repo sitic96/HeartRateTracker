@@ -34,6 +34,10 @@
 		49BF32BF22CB5AA2005FC8D8 /* SignUpOfferRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32BE22CB5AA2005FC8D8 /* SignUpOfferRouter.swift */; };
 		49BF32C122CB5F87005FC8D8 /* SignUpOfferInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32C022CB5F87005FC8D8 /* SignUpOfferInjector.swift */; };
 		49BF32C422CB72D1005FC8D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32C322CB72D1005FC8D8 /* User.swift */; };
+		49BF32C722CB86F4005FC8D8 /* ProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32C622CB86F4005FC8D8 /* ProfileInfoViewController.swift */; };
+		49BF32C922CCA5D6005FC8D8 /* ProfileInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BF32C822CCA5D6005FC8D8 /* ProfileInfo.storyboard */; };
+		49BF32CB22CCBAE9005FC8D8 /* ProfileInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32CA22CCBAE9005FC8D8 /* ProfileInfoPresenter.swift */; };
+		49BF32CD22CCBB77005FC8D8 /* ProfileInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32CC22CCBB77005FC8D8 /* ProfileInfoRouter.swift */; };
 		49C2146022C4E9F3004A1560 /* SplashScreenInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */; };
 		49C2146322C4EC32004A1560 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146222C4EC32004A1560 /* Const.swift */; };
 		49C2146522C4ED05004A1560 /* SplashScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */; };
@@ -79,6 +83,10 @@
 		49BF32BE22CB5AA2005FC8D8 /* SignUpOfferRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferRouter.swift; sourceTree = "<group>"; };
 		49BF32C022CB5F87005FC8D8 /* SignUpOfferInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferInjector.swift; sourceTree = "<group>"; };
 		49BF32C322CB72D1005FC8D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		49BF32C622CB86F4005FC8D8 /* ProfileInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoViewController.swift; sourceTree = "<group>"; };
+		49BF32C822CCA5D6005FC8D8 /* ProfileInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileInfo.storyboard; sourceTree = "<group>"; };
+		49BF32CA22CCBAE9005FC8D8 /* ProfileInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoPresenter.swift; sourceTree = "<group>"; };
+		49BF32CC22CCBB77005FC8D8 /* ProfileInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoRouter.swift; sourceTree = "<group>"; };
 		49C2145F22C4E9F3004A1560 /* SplashScreenInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenInjector.swift; sourceTree = "<group>"; };
 		49C2146222C4EC32004A1560 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		49C2146422C4ED05004A1560 /* SplashScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenRouter.swift; sourceTree = "<group>"; };
@@ -246,6 +254,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		49BF32C522CB86B8005FC8D8 /* Profile Info */ = {
+			isa = PBXGroup;
+			children = (
+				49BF32C622CB86F4005FC8D8 /* ProfileInfoViewController.swift */,
+				49BF32C822CCA5D6005FC8D8 /* ProfileInfo.storyboard */,
+				49BF32CA22CCBAE9005FC8D8 /* ProfileInfoPresenter.swift */,
+				49BF32CC22CCBB77005FC8D8 /* ProfileInfoRouter.swift */,
+			);
+			path = "Profile Info";
+			sourceTree = "<group>";
+		};
 		49C2146122C4EC21004A1560 /* Global */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +290,7 @@
 			children = (
 				49447FD522C5175900F689C5 /* AlertView */,
 				49447FC722C50ECB00F689C5 /* Common */,
+				49BF32C522CB86B8005FC8D8 /* Profile Info */,
 				49447FC222C5047100F689C5 /* Authentication */,
 				49FFF19822C4C39700322A78 /* Splash screen */,
 			);
@@ -428,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BF32C922CCA5D6005FC8D8 /* ProfileInfo.storyboard in Resources */,
 				7223640D2201D97E009AD1E9 /* LaunchScreen.storyboard in Resources */,
 				4902035C22CA193A00561120 /* Styles.yaml in Resources */,
 				49C2146A22C4F994004A1560 /* GoogleService-Info.plist in Resources */,
@@ -506,6 +527,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BF32CB22CCBAE9005FC8D8 /* ProfileInfoPresenter.swift in Sources */,
+				49BF32C722CB86F4005FC8D8 /* ProfileInfoViewController.swift in Sources */,
 				49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */,
 				49447FCE22C5128C00F689C5 /* LoginViewController.swift in Sources */,
 				49FFF19B22C4C82800322A78 /* SplashPresenter.swift in Sources */,
@@ -520,6 +543,7 @@
 				49BF32C122CB5F87005FC8D8 /* SignUpOfferInjector.swift in Sources */,
 				49BF32B322CB545D005FC8D8 /* AuthenticationUseCase.swift in Sources */,
 				4902036422CA429100561120 /* SignUpRouter.swift in Sources */,
+				49BF32CD22CCBB77005FC8D8 /* ProfileInfoRouter.swift in Sources */,
 				49BF32BD22CB59E4005FC8D8 /* SignUpOfferPresenter.swift in Sources */,
 				4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */,
 				49BF32B922CB5887005FC8D8 /* SignUpOfferViewController.swift in Sources */,

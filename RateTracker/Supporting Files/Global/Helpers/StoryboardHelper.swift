@@ -21,4 +21,10 @@ struct StoryboardHelper {
                                                   bundle: Bundle.main)
         return loginStoryboard.instantiateInitialViewController()
     }
+
+    static func getProfileInfoViewController() -> UIViewController? {
+        let profileInfoStoryboard = UIStoryboard(name: "ProfileInfo",
+                                                 bundle: .main)
+        return profileInfoStoryboard.instantiateInitialViewController()
+    }
 }
