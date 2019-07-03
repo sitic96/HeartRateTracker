@@ -12,7 +12,8 @@ protocol SignUpOfferRouterProtocol {
     func prepare(for segue: UIStoryboardSegue?)
 }
 
-struct SignUpOfferRouter { }
+struct SignUpOfferRouter {
+}
 
 extension SignUpOfferRouter: SignUpOfferRouterProtocol {
     func prepare(for segue: UIStoryboardSegue?) {
@@ -20,10 +21,16 @@ extension SignUpOfferRouter: SignUpOfferRouterProtocol {
             return
         }
 
-        if let controller = segue.destination as? SignUpViewController {
-            SignUpInjector.inject(controller)
+        // TODO: get rid of (as!)
+        switch segue.destination {
+        case is SignUpViewController:
+            SignUpInjector.inject(segue.destination as! SignUpViewController)
+        case is UINavigationController:
+            if let destVC = (segue.destination as! UINavigationController).viewControllers[0] as? ProfileInfoViewController {
+                ProfileInfoInjector.inject(destVC)
+            }
+        default:
+            return
         }
     }
-
-    
 }

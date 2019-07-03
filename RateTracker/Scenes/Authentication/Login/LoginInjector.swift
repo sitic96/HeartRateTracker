@@ -13,7 +13,8 @@ struct LoginInjector {
 
     static func inject<View: UIViewController & LoginViewProtocol>(_ view: View) {
         let loginRouter = LoginRouter(viewController: view)
-        let authGateway = AuthenticationGateway()
+        let authGateway = AuthenticationGateway(session: SessionManager.shared,
+                                                coreData: CoreDataManager.shared)
         let authUseCase = AuthenticationUseCase(authenticationGateway: authGateway)
         let loginPresenter = LoginPresenter(view,
                                             router: loginRouter,
