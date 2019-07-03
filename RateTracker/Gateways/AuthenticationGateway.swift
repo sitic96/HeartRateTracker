@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import CoreData
 
 typealias UserCompletionHandler = (_ result: Result<User, Error>) -> Void
 protocol AuthenticationGatewayProtocol {
@@ -17,10 +18,32 @@ protocol AuthenticationGatewayProtocol {
     func signup(with login: String,
                 password: String,
                 completion: @escaping UserCompletionHandler)
+    func userDidRejectSignUp()
 }
 
 class AuthenticationGateway {
+    private let session: SessionManagerProtocol
+    private let coreData: CoreDataManagerProtocol
 
+    init(session: SessionManagerProtocol,
+         coreData: CoreDataManagerProtocol) {
+        self.session = session
+        self.coreData = coreData
+    }
+
+    private func userDidLaunchAppFirstTime() {
+        session.isUserFirstLaunch = true
+    }
+
+    private func save(user: User) throws {
+        let context = coreData.container.newBackgroundContext()
+        context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+
+        try coreData.deleteAllObjects(in: context)
+        _ = try CoreUser(from: user, in: context)
+        try context.save()
+
+    }
 }
 
 extension AuthenticationGateway: AuthenticationGatewayProtocol {
@@ -28,12 +51,18 @@ extension AuthenticationGateway: AuthenticationGatewayProtocol {
                password: String,
                completion: @escaping UserCompletionHandler) {
         Auth.auth().signIn(withEmail: login,
-                           password: password) { authResult, error in
+                           password: password) { [weak self] authResult, error in
                             if let error = error {
                                 completion(.failure(error))
                             } else {
                                 if let user = authResult?.user {
                                     let appUser = User(email: user.email)
+                                    do {
+                                        try self?.save(user: appUser)
+                                    } catch let error {
+                                        completion(.failure(error))
+                                    }
+                                    self?.session.currentUser = appUser
                                     completion(.success(appUser))
                                 }
                             }
@@ -43,15 +72,26 @@ extension AuthenticationGateway: AuthenticationGatewayProtocol {
     func signup(with login: String,
                 password: String,
                 completion: @escaping UserCompletionHandler) {
-        Auth.auth().createUser(withEmail: login, password: password) { authResult, error in
+        Auth.auth().createUser(withEmail: login, password: password) { [weak self] authResult, error in
             if let error = error {
                 completion(.failure(error))
             } else {
                 if let user = authResult?.user {
                     let appUser = User(email: user.email)
+                    self?.userDidLaunchAppFirstTime()
+                    do {
+                        try self?.save(user: appUser)
+                    } catch let error {
+                        completion(.failure(error))
+                    }
+                    self?.session.currentUser = appUser
                     completion(.success(appUser))
                 }
             }
         }
+    }
+
+    func userDidRejectSignUp() {
+        userDidLaunchAppFirstTime()
     }
 }

@@ -11,6 +11,7 @@ import Foundation
 protocol ProfileInfoPresenterProtocol {
     var router: ProfileInfoRouterProtocol { get }
 
+    func viewDidLoad()
     func viewWillAppear(_ view: ProfileInfoViewProtocol)
 
     func viewDidSelectEditInfo()
@@ -19,19 +20,29 @@ protocol ProfileInfoPresenterProtocol {
 class ProfileInfoPresenter {
     private weak var view: ProfileInfoViewProtocol?
     var router: ProfileInfoRouterProtocol
+    private let userUseCase: UserUseCaseProtocol
 
     init(_ view: ProfileInfoViewProtocol,
-         router: ProfileInfoRouterProtocol) {
+         router: ProfileInfoRouterProtocol,
+         userUseCase: UserUseCaseProtocol) {
+        self.view = view
         self.router = router
+        self.userUseCase = userUseCase
     }
 }
 
 extension ProfileInfoPresenter: ProfileInfoPresenterProtocol {
+    func viewDidLoad() {
+        if userUseCase.isUserFirstLaunchApp {
+            router.showEditProfileVC()
+        }
+    }
+
     func viewWillAppear(_ view: ProfileInfoViewProtocol) {
 
     }
 
     func viewDidSelectEditInfo() {
-        
+        router.showEditProfileVC()
     }
 }
