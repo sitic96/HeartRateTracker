@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XD0-Xy-hY4">
-                    <rect key="frame" x="57" y="353" width="300" height="200"/>
+                    <rect key="frame" x="57" y="328" width="300" height="250"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6S6-B0-nO9">
                             <rect key="frame" x="118" y="-16" width="64" height="64"/>
@@ -41,10 +41,13 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-jR-tCF">
-                            <rect key="frame" x="0.0" y="136" width="300" height="64"/>
+                            <rect key="frame" x="0.0" y="200" width="300" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="dhM-Ct-1g7"/>
+                            </constraints>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2E6-G3-oFl">
-                            <rect key="frame" x="10" y="64" width="280" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2E6-G3-oFl">
+                            <rect key="frame" x="10" y="64" width="280" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -53,7 +56,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FB-UO-gOF">
-                            <rect key="frame" x="10" y="100" width="280" height="21"/>
+                            <rect key="frame" x="10" y="99.5" width="280" height="85.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -65,7 +68,7 @@
                     <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="cqa-jR-tCF" firstAttribute="top" secondItem="5FB-UO-gOF" secondAttribute="bottom" constant="15" id="4Nz-fw-y9Y"/>
-                        <constraint firstAttribute="height" constant="200" id="Dvc-XN-LDA"/>
+                        <constraint firstAttribute="height" constant="250" id="Dvc-XN-LDA"/>
                         <constraint firstItem="2E6-G3-oFl" firstAttribute="top" secondItem="6S6-B0-nO9" secondAttribute="bottom" constant="16" id="E0C-aI-8Hx"/>
                         <constraint firstItem="5FB-UO-gOF" firstAttribute="top" secondItem="2E6-G3-oFl" secondAttribute="bottom" constant="15" id="LWy-14-c44"/>
                         <constraint firstItem="5FB-UO-gOF" firstAttribute="leading" secondItem="XD0-Xy-hY4" secondAttribute="leading" constant="10" id="MUe-Iv-5gI"/>

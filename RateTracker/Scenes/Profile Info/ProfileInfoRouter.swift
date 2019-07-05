@@ -28,6 +28,9 @@ extension ProfileInfoRouter: ProfileInfoRouterProtocol {
     }
 
     func showMainVC() {
-        
+        guard let mainVC = StoryboardHelper.getMainViewController() else {
+            return
+        }
+        viewController?.present(mainVC, animated: true, completion: nil)
     }
 }
