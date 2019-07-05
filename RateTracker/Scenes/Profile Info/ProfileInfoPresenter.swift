@@ -34,7 +34,7 @@ class ProfileInfoPresenter {
 extension ProfileInfoPresenter: ProfileInfoPresenterProtocol {
     func viewDidLoad() {
         if userUseCase.isUserFirstLaunchApp {
-            router.showEditProfileVC()
+            router.showEditProfileVC(animated: false)
         }
     }
 
@@ -43,6 +43,6 @@ extension ProfileInfoPresenter: ProfileInfoPresenterProtocol {
     }
 
     func viewDidSelectEditInfo() {
-        router.showEditProfileVC()
+        router.showEditProfileVC(animated: true)
     }
 }

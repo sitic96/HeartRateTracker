@@ -8,12 +8,20 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
+protocol EditInfoViewProtocol: CommonViewProtocol {
+    var presenter: EditInfoPresenterProtocol! { get set }
+
+    func fillInfo(for user: User)
+}
+
+class EditInfoViewController: UIViewController {
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var dateOfBirthPickerView: UIDatePicker!
     @IBOutlet weak var secondNameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+
+    var presenter: EditInfoPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +35,21 @@ class EditProfileViewController: UIViewController {
     }
 
     @IBAction func userDidSelectUpdatePhoto(_ sender: Any) {
+        presenter.viewDidSelectUpdatePhoto()
     }
 
     @IBAction func userDidFinishEditProfile(_ sender: Any) {
+        presenter.viewDidFinishEditProfile()
+    }
+}
+
+extension EditInfoViewController: EditInfoViewProtocol {
+    func fillInfo(for user: User) {
+        if let userDateOfBirth = user.birthDate {
+            dateOfBirthPickerView.date = userDateOfBirth
+        }
+        nameTextField.text = user.name
+        secondNameTextField.text = user.secondName
+        emailTextField.text = user.email
     }
 }
