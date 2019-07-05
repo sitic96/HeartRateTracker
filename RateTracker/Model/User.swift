@@ -9,5 +9,8 @@
 import Foundation
 
 struct User {
-    let email: String?
+    var email: String?
+    var name: String?
+    var secondName: String?
+    var birthDate: Date?
 }

@@ -27,6 +27,11 @@ public class CoreUser: NSManagedObject {
 
 extension CoreUser {
     func toUser() -> User {
-        return User(email: self.email)
+        var user = User()
+        user.email = self.email
+        user.name = self.name
+        user.secondName = self.secondName
+        user.birthDate = self.dateOfBirth
+        return user
     }
 }

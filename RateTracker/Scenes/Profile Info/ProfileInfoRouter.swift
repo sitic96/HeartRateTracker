@@ -9,20 +9,25 @@
 import UIKit
 
 protocol ProfileInfoRouterProtocol {
-    func showEditProfileVC()
+    func showEditProfileVC(animated: Bool)
+    func showMainVC()
 }
 
 struct ProfileInfoRouter {
     weak var viewController: (UIViewController & ProfileInfoViewProtocol)?
-
 }
 
 extension ProfileInfoRouter: ProfileInfoRouterProtocol {
-    func showEditProfileVC() {
+    func showEditProfileVC(animated: Bool) {
         guard let vc = StoryboardHelper.getEditProfileViewController(),
-            let editViewController = vc as? EditProfileViewController else {
+            let editViewController = vc as? EditInfoViewController else {
                 return
         }
-        viewController?.navigationController?.pushViewController(editViewController, animated: false)
+        EditInfoInjector.inject(editViewController)
+        viewController?.navigationController?.pushViewController(editViewController, animated: animated)
+    }
+
+    func showMainVC() {
+        
     }
 }

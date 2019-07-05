@@ -14,6 +14,9 @@
 		4902036222CA428500561120 /* SignUpInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902036122CA428500561120 /* SignUpInjector.swift */; };
 		4902036422CA429100561120 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902036322CA429100561120 /* SignUpRouter.swift */; };
 		4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902036922CA4D1A00561120 /* UIViewController+customAlert.swift */; };
+		49134D0922CF516A00CE3B4A /* EditInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49134D0822CF516A00CE3B4A /* EditInfoPresenter.swift */; };
+		49134D0B22CF517700CE3B4A /* EditInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49134D0A22CF517700CE3B4A /* EditInfoRouter.swift */; };
+		49134D0D22CF518D00CE3B4A /* EditInfoInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49134D0C22CF518D00CE3B4A /* EditInfoInjector.swift */; };
 		49447FC922C50EF800F689C5 /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49447FC822C50EF800F689C5 /* LogoView.xib */; };
 		49447FCC22C50F1600F689C5 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FCB22C50F1600F689C5 /* LogoView.swift */; };
 		49447FCE22C5128C00F689C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FCD22C5128C00F689C5 /* LoginViewController.swift */; };
@@ -71,6 +74,9 @@
 		4902036122CA428500561120 /* SignUpInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInjector.swift; sourceTree = "<group>"; };
 		4902036322CA429100561120 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		4902036922CA4D1A00561120 /* UIViewController+customAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+customAlert.swift"; sourceTree = "<group>"; };
+		49134D0822CF516A00CE3B4A /* EditInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoPresenter.swift; sourceTree = "<group>"; };
+		49134D0A22CF517700CE3B4A /* EditInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoRouter.swift; sourceTree = "<group>"; };
+		49134D0C22CF518D00CE3B4A /* EditInfoInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoInjector.swift; sourceTree = "<group>"; };
 		49447FC822C50EF800F689C5 /* LogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
 		49447FCB22C50F1600F689C5 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		49447FCD22C5128C00F689C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +309,9 @@
 			isa = PBXGroup;
 			children = (
 				4972A68C22CCE54C007971E2 /* EditProfileViewController.swift */,
+				49134D0822CF516A00CE3B4A /* EditInfoPresenter.swift */,
+				49134D0A22CF517700CE3B4A /* EditInfoRouter.swift */,
+				49134D0C22CF518D00CE3B4A /* EditInfoInjector.swift */,
 			);
 			path = "Edit Profile";
 			sourceTree = "<group>";
@@ -648,7 +657,10 @@
 				49BF32B622CB562A005FC8D8 /* AuthenticationGateway.swift in Sources */,
 				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
 				49C2146322C4EC32004A1560 /* Const.swift in Sources */,
+				49134D0922CF516A00CE3B4A /* EditInfoPresenter.swift in Sources */,
 				4902036222CA428500561120 /* SignUpInjector.swift in Sources */,
+				49134D0B22CF517700CE3B4A /* EditInfoRouter.swift in Sources */,
+				49134D0D22CF518D00CE3B4A /* EditInfoInjector.swift in Sources */,
 				4972A68A22CCCDC6007971E2 /* CoreDataManager.swift in Sources */,
 				49447FCC22C50F1600F689C5 /* LogoView.swift in Sources */,
 				49BF32CF22CCBCB2005FC8D8 /* UserUseCase.swift in Sources */,

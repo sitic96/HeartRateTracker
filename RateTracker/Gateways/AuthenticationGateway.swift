@@ -57,7 +57,8 @@ extension AuthenticationGateway: AuthenticationGatewayProtocol {
                                 completion(.failure(error))
                             } else {
                                 if let user = authResult?.user {
-                                    let appUser = User(email: user.email)
+                                    var appUser = User()
+                                    appUser.email = user.email
                                     do {
                                         try self?.save(user: appUser)
                                     } catch let error {
@@ -78,7 +79,8 @@ extension AuthenticationGateway: AuthenticationGatewayProtocol {
                 completion(.failure(error))
             } else {
                 if let user = authResult?.user {
-                    let appUser = User(email: user.email)
+                    var appUser = User()
+                    appUser.email = user.email
                     self?.userDidLaunchAppFirstTime(user: appUser)
                     do {
                         try self?.save(user: appUser)
@@ -93,6 +95,6 @@ extension AuthenticationGateway: AuthenticationGatewayProtocol {
 
     func userDidRejectSignUp() {
         // TODO: replace in future for non register user
-        userDidLaunchAppFirstTime(user: User(email: nil))
+        userDidLaunchAppFirstTime(user: User())
     }
 }
