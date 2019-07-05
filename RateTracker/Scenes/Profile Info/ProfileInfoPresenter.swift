@@ -10,11 +10,13 @@ import Foundation
 
 protocol ProfileInfoPresenterProtocol {
     var router: ProfileInfoRouterProtocol { get }
+    var shouldHideCloseButton: Bool { get }
 
     func viewDidLoad()
     func viewWillAppear()
 
     func viewDidSelectEditInfo()
+    func viewDidSelectClose()
 }
 
 class ProfileInfoPresenter {
@@ -32,6 +34,10 @@ class ProfileInfoPresenter {
 }
 
 extension ProfileInfoPresenter: ProfileInfoPresenterProtocol {
+    var shouldHideCloseButton: Bool {
+        return !userUseCase.isUserFirstLaunchApp
+    }
+
     func viewDidLoad() {
         if userUseCase.isUserFirstLaunchApp {
             router.showEditProfileVC(animated: false)
@@ -44,5 +50,9 @@ extension ProfileInfoPresenter: ProfileInfoPresenterProtocol {
 
     func viewDidSelectEditInfo() {
         router.showEditProfileVC(animated: true)
+    }
+
+    func viewDidSelectClose() {
+        router.showMainVC()
     }
 }

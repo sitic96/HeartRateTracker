@@ -11,6 +11,8 @@ import Foundation
 protocol UserGatewayProtocol {
     var isUserFirstAppLaunch: Bool { get }
     var currentUser: User { get }
+
+    func updateUserInfo(newInfo: User)
 }
 
 class UserGateway {
@@ -32,5 +34,9 @@ extension UserGateway: UserGatewayProtocol {
         get {
             return session.currentUser
         }
+    }
+
+    func updateUserInfo(newInfo: User) {
+        session.currentUser = newInfo
     }
 }

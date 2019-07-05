@@ -13,7 +13,10 @@ protocol EditInfoPresenterProtocol {
     var router: EditInfoRouterProtocol { get }
 
     func viewDidLoad()
-    func viewDidFinishEditProfile()
+    func viewDidFinishEditProfile(name: String?,
+                                  secondName: String?,
+                                  email: String?,
+                                  dateOfBirth: Date)
     func viewDidSelectUpdatePhoto()
 }
 
@@ -37,7 +40,27 @@ extension EditInfoPresenter: EditInfoPresenterProtocol {
         view?.fillInfo(for: userUseCase.currentUser)
     }
 
-    func viewDidFinishEditProfile() {
+    func viewDidFinishEditProfile(name: String?,
+                                  secondName: String?,
+                                  email: String?,
+                                  dateOfBirth: Date) {
+        if let email = email,
+            !email.isEmpty {
+            if !EmailValidator.validate(email: email) {
+                view?.showAlert(delegate: nil,
+                                type: .error,
+                                title: LocalizableKeys.error.localized,
+                                text: LocalizableKeys.wrongEmail.localized,
+                                options: [AlertOption(text: LocalizableKeys.ok.localized)])
+            }
+        }
+        var newUser = User()
+        newUser.name = name
+        newUser.secondName = secondName
+        newUser.email = email
+        newUser.birthDate = dateOfBirth
+
+        userUseCase.updateUserInfo(newInfo: newUser)
         router.backToInfoVC()
     }
 

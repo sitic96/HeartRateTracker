@@ -15,11 +15,11 @@ protocol EditInfoViewProtocol: CommonViewProtocol {
 }
 
 class EditInfoViewController: UIViewController {
-    @IBOutlet weak var profilePhotoImageView: UIImageView!
-    @IBOutlet weak var dateOfBirthPickerView: UIDatePicker!
-    @IBOutlet weak var secondNameTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet private weak var profilePhotoImageView: UIImageView!
+    @IBOutlet private weak var dateOfBirthPickerView: UIDatePicker!
+    @IBOutlet private weak var secondNameTextField: UITextField!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
 
     var presenter: EditInfoPresenterProtocol!
 
@@ -39,7 +39,10 @@ class EditInfoViewController: UIViewController {
     }
 
     @IBAction func userDidFinishEditProfile(_ sender: Any) {
-        presenter.viewDidFinishEditProfile()
+        presenter.viewDidFinishEditProfile(name: nameTextField.text,
+                                           secondName: secondNameTextField.text,
+                                           email: emailTextField.text,
+                                           dateOfBirth: dateOfBirthPickerView.date)
     }
 }
 

@@ -11,6 +11,8 @@ import Foundation
 protocol UserUseCaseProtocol {
     var isUserFirstLaunchApp: Bool { get }
     var currentUser: User { get }
+
+    func updateUserInfo(newInfo: User)
 }
 
 class UserUseCase {
@@ -34,4 +36,7 @@ extension UserUseCase: UserUseCaseProtocol {
         }
     }
 
+    func updateUserInfo(newInfo: User) {
+        userGateway.updateUserInfo(newInfo: newInfo)
+    }
 }

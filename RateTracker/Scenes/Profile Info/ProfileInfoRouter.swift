@@ -10,6 +10,7 @@ import UIKit
 
 protocol ProfileInfoRouterProtocol {
     func showEditProfileVC(animated: Bool)
+    func showMainVC()
 }
 
 struct ProfileInfoRouter {
@@ -24,5 +25,9 @@ extension ProfileInfoRouter: ProfileInfoRouterProtocol {
         }
         EditInfoInjector.inject(editViewController)
         viewController?.navigationController?.pushViewController(editViewController, animated: animated)
+    }
+
+    func showMainVC() {
+        
     }
 }

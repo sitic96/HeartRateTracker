@@ -20,8 +20,8 @@ class ProfileInfoViewController: UIViewController {
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var userSecondNameLabel: UILabel!
     @IBOutlet private weak var userAgeLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var descriptionTextView: UITextView!
+    @IBOutlet weak var closeButton: UIButton!
+
 
     var presenter: ProfileInfoPresenterProtocol!
 
@@ -35,10 +35,15 @@ class ProfileInfoViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
 
         presenter.viewWillAppear()
+        closeButton.isHidden = presenter.shouldHideCloseButton
     }
     
     @IBAction func userDidSelectChangeProfile(_ sender: UIButton) {
         presenter.viewDidSelectEditInfo()
+    }
+    
+    @IBAction func userDidClickCloseView(_ sender: Any) {
+        presenter.viewDidSelectClose()
     }
 }
 
