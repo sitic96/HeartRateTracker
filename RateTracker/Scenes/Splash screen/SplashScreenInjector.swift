@@ -13,7 +13,11 @@ struct SplashScreenInjector {
 
     static func inject<View: UIViewController & SplashScreenViewProtocol>(_ view: View) {
         let splashRouter = SplashScreenRouter(viewController: view)
-        let presenter = SplashPresenter(router: splashRouter)
+        let authGateway = AuthenticationGateway(session: SessionManager.shared,
+                                                coreData: CoreDataManager.shared)
+        let authUseCase = AuthenticationUseCase(authenticationGateway: authGateway)
+        let presenter = SplashPresenter(router: splashRouter,
+                                        authUseCase: authUseCase)
         view.presenter = presenter
     }
 }

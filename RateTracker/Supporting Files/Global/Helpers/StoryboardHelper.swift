@@ -34,4 +34,10 @@ struct StoryboardHelper {
         let editViewController = profileInfoStoryboard.instantiateViewController(withIdentifier: "editInfoViewController")
         return editViewController
     }
+
+    static func getMainViewController() -> UIViewController? {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: .main)
+
+        return mainStoryboard.instantiateInitialViewController()
+    }
 }

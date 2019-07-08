@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 protocol SplashPresenterProtocol {
     var router: SplashScreenRouterProtocol { get }
@@ -15,15 +16,21 @@ protocol SplashPresenterProtocol {
 
 class SplashPresenter {
     var router: SplashScreenRouterProtocol
+    private let authUseCase: AuthenticationUseCaseProtocol
 
-    init(router: SplashScreenRouterProtocol) {
+    init(router: SplashScreenRouterProtocol,
+         authUseCase: AuthenticationUseCaseProtocol) {
         self.router = router
+        self.authUseCase = authUseCase
     }
 }
 
 extension SplashPresenter: SplashPresenterProtocol {
     func viewDidAppear() {
-        // TODO - replace with initional data loading before show main vc
-        router.showMainController()
+        if authUseCase.isUserSignedIn() {
+            router.showMainController()
+        } else {
+            router.showLoginController()
+        }
     }
 }

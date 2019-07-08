@@ -10,6 +10,7 @@ import UIKit
 
 protocol SplashScreenRouterProtocol {
     func showMainController()
+    func showLoginController()
 }
 
 struct SplashScreenRouter {
@@ -20,17 +21,24 @@ extension SplashScreenRouter: SplashScreenRouterProtocol {
     func showMainController() {
         // TODO: if user already login - show main vc
         // Otherwise show login flow
-        guard let viewController = StoryboardHelper.getLoginViewController(),
-        let loginVC = viewController as? LoginViewController else {
+        guard let viewController = StoryboardHelper.getMainViewController() else {
             return
+        }
+        viewController.modalTransitionStyle = .crossDissolve
+        UIApplication.shared.keyWindow?.rootViewController?.present(viewController,
+                                                                    animated: true,
+                                                                    completion: nil)
+    }
+
+    func showLoginController() {
+        guard let viewController = StoryboardHelper.getLoginViewController(),
+            let loginVC = viewController as? LoginViewController else {
+                return
         }
         LoginInjector.inject(loginVC)
 
         UIApplication.shared.keyWindow?.rootViewController?.present(loginVC,
                                                                     animated: true,
                                                                     completion: nil)
-//        viewController.present(loginVC,
-//                               animated: true,
-//                               completion: nil)
     }
 }
