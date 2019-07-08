@@ -39,6 +39,7 @@
 		4972A68D22CCE54C007971E2 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68C22CCE54C007971E2 /* EditProfileViewController.swift */; };
 		4972A68F22CCE862007971E2 /* ProfileInfoInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68E22CCE862007971E2 /* ProfileInfoInjector.swift */; };
 		4989BC0F22CF6C03006F8A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4989BC0E22CF6C03006F8A42 /* Main.storyboard */; };
+		4989BC1222D365FA006F8A42 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989BC1122D365FA006F8A42 /* MainViewController.swift */; };
 		49BF32B322CB545D005FC8D8 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B222CB545D005FC8D8 /* AuthenticationUseCase.swift */; };
 		49BF32B622CB562A005FC8D8 /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */; };
 		49BF32B922CB5887005FC8D8 /* SignUpOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF32B822CB5887005FC8D8 /* SignUpOfferViewController.swift */; };
@@ -102,6 +103,7 @@
 		4972A68C22CCE54C007971E2 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		4972A68E22CCE862007971E2 /* ProfileInfoInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoInjector.swift; sourceTree = "<group>"; };
 		4989BC0E22CF6C03006F8A42 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4989BC1122D365FA006F8A42 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		49BF32B222CB545D005FC8D8 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		49BF32B522CB562A005FC8D8 /* AuthenticationGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
 		49BF32B822CB5887005FC8D8 /* SignUpOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOfferViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				4989BC0E22CF6C03006F8A42 /* Main.storyboard */,
+				4989BC1122D365FA006F8A42 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				49BF32B322CB545D005FC8D8 /* AuthenticationUseCase.swift in Sources */,
 				4902036422CA429100561120 /* SignUpRouter.swift in Sources */,
 				49BF32CD22CCBB77005FC8D8 /* ProfileInfoRouter.swift in Sources */,
+				4989BC1222D365FA006F8A42 /* MainViewController.swift in Sources */,
 				49BF32BD22CB59E4005FC8D8 /* SignUpOfferPresenter.swift in Sources */,
 				4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */,
 				49BF32B922CB5887005FC8D8 /* SignUpOfferViewController.swift in Sources */,

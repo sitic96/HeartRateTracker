@@ -29,7 +29,7 @@
         <!--Item 1-->
         <scene sceneID="O7o-K3-r65">
             <objects>
-                <viewController id="2B0-J9-xzp" sceneMemberID="viewController">
+                <viewController id="2B0-J9-xzp" customClass="MainViewController" customModule="RateTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfo-Wf-HyV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

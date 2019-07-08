@@ -19,6 +19,7 @@ protocol AuthenticationGatewayProtocol {
                 password: String,
                 completion: @escaping UserCompletionHandler)
     func userDidRejectSignUp()
+    func isUserSignedIn() -> Bool
 }
 
 class AuthenticationGateway {
@@ -48,6 +49,10 @@ class AuthenticationGateway {
 }
 
 extension AuthenticationGateway: AuthenticationGatewayProtocol {
+    func isUserSignedIn() -> Bool {
+        return Auth.auth().currentUser != nil
+    }
+
     func login(with login: String,
                password: String,
                completion: @escaping UserCompletionHandler) {
