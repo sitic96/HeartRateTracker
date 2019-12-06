@@ -14,6 +14,7 @@
 		49447FE722C6337600F689C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49447FE922C6337600F689C5 /* Localizable.strings */; };
 		49447FED22C6351600F689C5 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FEC22C6351600F689C5 /* String+localized.swift */; };
 		495374E2239AD761009F4099 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495374E1239AD761009F4099 /* AuthStoryboard.storyboard */; };
+		495374E5239AD7D9009F4099 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495374E4239AD7D9009F4099 /* User.swift */; };
 		4972A67A22CCBD60007971E2 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A67922CCBD60007971E2 /* SessionManager.swift */; };
 		4972A67D22CCBEC0007971E2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4972A67C22CCBEBF007971E2 /* CoreData.framework */; };
 		4972A68622CCC94D007971E2 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68522CCC94D007971E2 /* UserError.swift */; };
@@ -38,6 +39,7 @@
 		49447FEB22C633F600F689C5 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		49447FEC22C6351600F689C5 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		495374E1239AD761009F4099 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
+		495374E4239AD7D9009F4099 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4972A67922CCBD60007971E2 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		4972A67C22CCBEBF007971E2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4972A68522CCC94D007971E2 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		495374DD239AD62F009F4099 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				495374E3239AD7C9009F4099 /* Models */,
 				49C2146122C4EC21004A1560 /* Global */,
 				49447FE022C630CA00F689C5 /* Managers */,
 			);
@@ -134,6 +137,14 @@
 				495374E1239AD761009F4099 /* AuthStoryboard.storyboard */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		495374E3239AD7C9009F4099 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				495374E4239AD7D9009F4099 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4972A67722CCBD45007971E2 /* Session */ = {
@@ -399,6 +410,7 @@
 				722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */,
 				49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */,
 				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
+				495374E5239AD7D9009F4099 /* User.swift in Sources */,
 				49C2146322C4EC32004A1560 /* Const.swift in Sources */,
 				4972A68A22CCCDC6007971E2 /* CoreDataManager.swift in Sources */,
 				49C2146822C4EFA1004A1560 /* StoryboardHelper.swift in Sources */,
