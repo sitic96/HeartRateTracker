@@ -9,7 +9,7 @@
 import UIKit
 
 struct StoryboardHelper {
-    private static let storyboard = UIStoryboard(name: "SplashView",
+    private static let storyboard = UIStoryboard(name: "Auth",
                                                  bundle: Bundle.main)
 
     static func getInitialViewController() -> UIViewController? {
