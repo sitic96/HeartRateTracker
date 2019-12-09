@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import Stylist
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,27 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         setupFirebase()
-        //setupStylist()
-        if let splashViewController = StoryboardHelper.getInitialViewController() as? SplashViewController {
-
-            SplashScreenInjector.inject(splashViewController)
-
-            window?.rootViewController = splashViewController
-            window?.makeKeyAndVisible()
-        }
         return true
     }
 
     private func setupFirebase() {
         FirebaseApp.configure()
-    }
-
-    private func setupStylist() {
-        guard let stylesFile = Bundle.main.path(forResource: "Styles", ofType: "yaml") else {
-            return
-        }
-
-        try? Stylist.shared.load(path: stylesFile)
     }
 }
 

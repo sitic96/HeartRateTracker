@@ -1,0 +1,38 @@
+//
+//  UnderlinedLabel.swift
+//  RateTracker
+//
+//  Created by Sitora on 06/12/2019.
+//  Copyright © 2019 Sitora Guliamova. All rights reserved.
+//
+
+import UIKit
+
+class UnderlinedLabel: UIView, NibLoadable {
+    @IBOutlet private weak var textField: UITextField!
+
+    @IBInspectable var placeholder: String = "" {
+        didSet {
+            self.textField.placeholder = placeholder
+        }
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupFromNib()
+        commonInit()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupFromNib()
+        commonInit()
+    }
+
+    private func commonInit() {
+//        self.textField.attributedPlaceholder =
+//            NSAttributedString(string: placeholder,
+//                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        //self.textField.placeholder = placeholder
+    }
+}
