@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SessionManagerProtocol: AnyObject {
-    var currentUser: User! { get set }
+//    var currentUser: User! { get set }
     var isUserFirstLaunch: Bool { get set }
 
     func resetSession()
@@ -18,7 +18,7 @@ protocol SessionManagerProtocol: AnyObject {
 class SessionManager {
     static let shared = SessionManager()
 
-    var currentUser: User!
+//    var currentUser: User!
     var isUserFirstLaunch: Bool = false
 
     private init() {

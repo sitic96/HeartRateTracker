@@ -21,4 +21,13 @@ class AuthViewController: UIViewController {
         scrollView.setContentOffset(CGPoint(x: 0,
                                             y: 0), animated: true)
     }
+
+    @IBAction func loginButtonClicked(_ sender: Any) {
+    }
+
+    @IBAction func skipButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func signupButtonClicked(_ sender: Any) {
+    }
 }

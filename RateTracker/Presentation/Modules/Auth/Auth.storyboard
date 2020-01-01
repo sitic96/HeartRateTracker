@@ -108,6 +108,9 @@
                                                                         <color key="value" red="1" green="1" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="loginButtonClicked:" destination="Erb-hT-nXZ" eventType="touchUpInside" id="fTL-jI-bjO"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pk-qb-N9d">
                                                                 <rect key="frame" x="161" y="286.99999999999994" width="30" height="20"/>
@@ -118,6 +121,9 @@
                                                                 <state key="normal" title="Skip">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="skipButtonClicked:" destination="Erb-hT-nXZ" eventType="touchUpInside" id="juP-oS-oMd"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,6 +211,9 @@
                                                                 <state key="normal" title="Skip">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="skipButtonClicked:" destination="Erb-hT-nXZ" eventType="touchUpInside" id="bTG-Dn-0sv"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79K-IZ-wIM">
                                                                 <rect key="frame" x="0.0" y="230.99999999999994" width="352" height="45"/>
@@ -225,6 +234,9 @@
                                                                         <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="signupButtonClicked:" destination="Erb-hT-nXZ" eventType="touchUpInside" id="iqz-zl-MUD"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
