@@ -14,6 +14,9 @@
         <array key="Montserrat-Light.ttf">
             <string>Montserrat-Light</string>
         </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Auth View Controller-->
@@ -36,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag7-qN-3ML">
-                                        <rect key="frame" x="31" y="294.66666666666669" width="352" height="307.00000000000006"/>
+                                        <rect key="frame" x="31" y="294.66666666666669" width="352.00000000000006" height="307.00000000000006"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-N2-ToB" userLabel="contentView">
                                                 <rect key="frame" x="0.0" y="0.0" width="704" height="307"/>
@@ -56,7 +59,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UqD-7H-3G4">
                                                                 <rect key="frame" x="0.0" y="50" width="352" height="100"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fks-th-rE3" customClass="UnderlinedLabel" customModule="RateTracker" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fks-th-rE3" customClass="UnderlinedTextField" customModule="RateTracker" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -64,7 +67,7 @@
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="style" value="Placeholder"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EW-hf-P4q" customClass="UnderlinedLabel" customModule="RateTracker" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EW-hf-P4q" customClass="UnderlinedTextField" customModule="RateTracker" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="50" width="352" height="50"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -90,7 +93,7 @@
                                                                     <action selector="createAccountButtonClicked:" destination="Erb-hT-nXZ" eventType="touchUpInside" id="bwL-tY-nGK"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdH-y4-vyj">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdH-y4-vyj" customClass="RTButton" customModule="RateTracker" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="231.99999999999994" width="352" height="45"/>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20451626712328766" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
@@ -112,6 +115,15 @@
                                                                     <action selector="loginButtonClicked:" destination="Erb-hT-nXZ" eventType="touchUpInside" id="fTL-jI-bjO"/>
                                                                 </connections>
                                                             </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-X6-7ti">
+                                                                <rect key="frame" x="5" y="281.99999999999994" width="342" height="0.0"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" id="DUD-Tc-LLg"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pk-qb-N9d">
                                                                 <rect key="frame" x="161" y="286.99999999999994" width="30" height="20"/>
                                                                 <constraints>
@@ -128,11 +140,11 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="dKn-X6-7ti" secondAttribute="trailing" constant="5" id="44N-T0-isS"/>
                                                             <constraint firstAttribute="trailing" secondItem="uPe-Vq-tX6" secondAttribute="trailing" id="46t-Wo-Ys0"/>
                                                             <constraint firstItem="tdH-y4-vyj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="D4c-Jz-Bht" secondAttribute="bottom" constant="5" id="5Dm-xl-qbN"/>
                                                             <constraint firstItem="8Pk-qb-N9d" firstAttribute="centerX" secondItem="Dk7-oW-R6A" secondAttribute="centerX" id="763-hn-6hB"/>
                                                             <constraint firstAttribute="trailing" secondItem="UqD-7H-3G4" secondAttribute="trailing" id="8kN-dg-XpP"/>
-                                                            <constraint firstItem="8Pk-qb-N9d" firstAttribute="top" secondItem="tdH-y4-vyj" secondAttribute="bottom" constant="10" id="ETe-rx-QJl"/>
                                                             <constraint firstAttribute="trailing" secondItem="tdH-y4-vyj" secondAttribute="trailing" id="KiG-Uo-S8A"/>
                                                             <constraint firstItem="UqD-7H-3G4" firstAttribute="leading" secondItem="Dk7-oW-R6A" secondAttribute="leading" id="Kkd-jP-lfZ"/>
                                                             <constraint firstAttribute="trailing" secondItem="D4c-Jz-Bht" secondAttribute="trailing" id="Mye-ad-2S0"/>
@@ -141,9 +153,12 @@
                                                             <constraint firstItem="tdH-y4-vyj" firstAttribute="leading" secondItem="Dk7-oW-R6A" secondAttribute="leading" id="T6e-AA-iE5"/>
                                                             <constraint firstItem="UqD-7H-3G4" firstAttribute="height" secondItem="Dk7-oW-R6A" secondAttribute="height" multiplier="0.4" priority="999" id="VAR-1X-RCG"/>
                                                             <constraint firstItem="D4c-Jz-Bht" firstAttribute="top" secondItem="UqD-7H-3G4" secondAttribute="bottom" id="XXt-kt-ILr"/>
+                                                            <constraint firstItem="dKn-X6-7ti" firstAttribute="leading" secondItem="Dk7-oW-R6A" secondAttribute="leading" constant="5" id="h6L-Rm-X1b"/>
                                                             <constraint firstItem="D4c-Jz-Bht" firstAttribute="leading" secondItem="Dk7-oW-R6A" secondAttribute="leading" id="uHd-46-IhX"/>
+                                                            <constraint firstItem="8Pk-qb-N9d" firstAttribute="top" secondItem="dKn-X6-7ti" secondAttribute="bottom" constant="5" id="vBh-Mm-FeW"/>
                                                             <constraint firstItem="uPe-Vq-tX6" firstAttribute="top" secondItem="Dk7-oW-R6A" secondAttribute="top" id="wdt-BR-d5n"/>
                                                             <constraint firstItem="UqD-7H-3G4" firstAttribute="top" secondItem="uPe-Vq-tX6" secondAttribute="bottom" constant="10" id="xzp-8B-wwo"/>
+                                                            <constraint firstItem="dKn-X6-7ti" firstAttribute="top" secondItem="tdH-y4-vyj" secondAttribute="bottom" constant="5" id="yae-fd-1W1"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cuz-ta-gkd" userLabel="signup">
@@ -161,21 +176,21 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VJP-xw-9Q5">
                                                                 <rect key="frame" x="0.0" y="50" width="352" height="150"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-Tc-3Zp" customClass="UnderlinedLabel" customModule="RateTracker" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-Tc-3Zp" customClass="UnderlinedTextField" customModule="RateTracker" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujR-ol-AmJ" customClass="UnderlinedLabel" customModule="RateTracker" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujR-ol-AmJ" customClass="UnderlinedTextField" customModule="RateTracker" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="50" width="352" height="50"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yM7-XB-MKf" customClass="UnderlinedLabel" customModule="RateTracker" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yM7-XB-MKf" customClass="UnderlinedTextField" customModule="RateTracker" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="100" width="352" height="50"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -215,7 +230,16 @@
                                                                     <action selector="skipButtonClicked:" destination="Erb-hT-nXZ" eventType="touchUpInside" id="bTG-Dn-0sv"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79K-IZ-wIM">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6G-mD-E1A">
+                                                                <rect key="frame" x="5" y="280.99999999999994" width="342" height="0.0"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" id="4B0-sA-6DH"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79K-IZ-wIM" customClass="RTButton" customModule="RateTracker" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="230.99999999999994" width="352" height="45"/>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
@@ -241,19 +265,22 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="DqY-NU-gRU" firstAttribute="top" secondItem="79K-IZ-wIM" secondAttribute="bottom" constant="10" id="4zb-G0-LxR"/>
                                                             <constraint firstAttribute="trailing" secondItem="KGZ-RU-Cf6" secondAttribute="trailing" id="6dr-15-n08"/>
                                                             <constraint firstItem="79K-IZ-wIM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RrZ-zb-mSI" secondAttribute="bottom" constant="5" id="6uD-1b-HI4"/>
                                                             <constraint firstItem="RrZ-zb-mSI" firstAttribute="top" secondItem="VJP-xw-9Q5" secondAttribute="bottom" constant="5" id="AyQ-NW-juJ"/>
                                                             <constraint firstAttribute="trailing" secondItem="DqY-NU-gRU" secondAttribute="trailing" id="Brp-uZ-KcS"/>
+                                                            <constraint firstItem="f6G-mD-E1A" firstAttribute="leading" secondItem="Cuz-ta-gkd" secondAttribute="leading" constant="5" id="Cmq-A1-jr3"/>
                                                             <constraint firstItem="VJP-xw-9Q5" firstAttribute="leading" secondItem="Cuz-ta-gkd" secondAttribute="leading" id="Ehd-m9-Tel"/>
                                                             <constraint firstItem="DqY-NU-gRU" firstAttribute="leading" secondItem="Cuz-ta-gkd" secondAttribute="leading" id="KqE-KI-cDB"/>
                                                             <constraint firstItem="KGZ-RU-Cf6" firstAttribute="top" secondItem="Cuz-ta-gkd" secondAttribute="top" id="L7x-w0-fGT"/>
                                                             <constraint firstItem="79K-IZ-wIM" firstAttribute="leading" secondItem="Cuz-ta-gkd" secondAttribute="leading" id="PJC-gi-sd3"/>
                                                             <constraint firstAttribute="bottom" secondItem="DqY-NU-gRU" secondAttribute="bottom" id="Tc7-vq-HaN"/>
                                                             <constraint firstItem="RrZ-zb-mSI" firstAttribute="leading" secondItem="Cuz-ta-gkd" secondAttribute="leading" id="V5E-xu-piE"/>
+                                                            <constraint firstItem="f6G-mD-E1A" firstAttribute="top" secondItem="79K-IZ-wIM" secondAttribute="bottom" constant="5" id="esX-QR-PkX"/>
                                                             <constraint firstItem="KGZ-RU-Cf6" firstAttribute="leading" secondItem="Cuz-ta-gkd" secondAttribute="leading" id="fTv-BP-wEL"/>
                                                             <constraint firstAttribute="trailing" secondItem="79K-IZ-wIM" secondAttribute="trailing" id="ggQ-of-zfX"/>
+                                                            <constraint firstAttribute="trailing" secondItem="f6G-mD-E1A" secondAttribute="trailing" constant="5" id="hl3-Xh-QDU"/>
+                                                            <constraint firstItem="DqY-NU-gRU" firstAttribute="top" secondItem="f6G-mD-E1A" secondAttribute="bottom" constant="5" id="iXG-hc-HUY"/>
                                                             <constraint firstAttribute="trailing" secondItem="VJP-xw-9Q5" secondAttribute="trailing" id="qw8-Q0-Ng3"/>
                                                             <constraint firstItem="VJP-xw-9Q5" firstAttribute="top" secondItem="KGZ-RU-Cf6" secondAttribute="bottom" constant="10" id="ryI-b3-tba"/>
                                                             <constraint firstItem="VJP-xw-9Q5" firstAttribute="height" secondItem="Cuz-ta-gkd" secondAttribute="height" multiplier="0.6" priority="999" id="ryL-Wl-FQK"/>
@@ -315,7 +342,18 @@
                         <viewLayoutGuide key="safeArea" id="KDN-YV-ijB"/>
                     </view>
                     <connections>
+                        <outlet property="emailLoginTextField" destination="fks-th-rE3" id="4Ba-IJ-t1X"/>
+                        <outlet property="emailSignUpTextField" destination="ujR-ol-AmJ" id="Vbs-DJ-mBT"/>
+                        <outlet property="loginErrorLabel" destination="dKn-X6-7ti" id="TvS-a3-zSo"/>
+                        <outlet property="loginErrorLabelHeightConstraint" destination="DUD-Tc-LLg" id="Srh-K8-ful"/>
+                        <outlet property="loginRTButton" destination="tdH-y4-vyj" id="Gsn-oJ-ayT"/>
+                        <outlet property="nameSignUpTextView" destination="Ojy-Tc-3Zp" id="knP-YN-kJl"/>
+                        <outlet property="passwordLoginTextField" destination="8EW-hf-P4q" id="cwM-yL-KPc"/>
+                        <outlet property="passwordSignUpTextField" destination="yM7-XB-MKf" id="On3-OO-3x1"/>
                         <outlet property="scrollView" destination="ag7-qN-3ML" id="LKy-qi-DN8"/>
+                        <outlet property="signUpErrorLabel" destination="f6G-mD-E1A" id="5gW-Vh-IXO"/>
+                        <outlet property="signUpRTButton" destination="79K-IZ-wIM" id="Abs-TU-Bbn"/>
+                        <outlet property="signupErrorLabelHeightConstraint" destination="4B0-sA-6DH" id="EO2-zy-VjM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mep-kG-G4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
