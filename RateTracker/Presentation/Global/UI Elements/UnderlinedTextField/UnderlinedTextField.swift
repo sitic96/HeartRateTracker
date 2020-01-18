@@ -8,13 +8,17 @@
 
 import UIKit
 
-class UnderlinedLabel: UIView, NibLoadable {
+class UnderlinedTextField: UIView, NibLoadable {
     @IBOutlet private weak var textField: UITextField!
 
     @IBInspectable var placeholder: String = "" {
         didSet {
             self.textField.placeholder = placeholder
         }
+    }
+
+    var text: String? {
+        return textField.text
     }
 
     required init?(coder aDecoder: NSCoder) {

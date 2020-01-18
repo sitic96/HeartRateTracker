@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hxh-1q-3BW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="VA9-gx-8Nv">
+            <objects>
+                <viewController storyboardIdentifier="Root" id="hxh-1q-3BW" customClass="RootViewController" customModule="RateTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pCh-0D-94h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth" translatesAutoresizingMaskIntoConstraints="NO" id="Bkd-BV-42G">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bkd-BV-42G" firstAttribute="top" secondItem="pCh-0D-94h" secondAttribute="top" id="H6H-m2-LDg"/>
+                            <constraint firstItem="Bkd-BV-42G" firstAttribute="leading" secondItem="pCh-0D-94h" secondAttribute="leading" id="M1a-OD-onK"/>
+                            <constraint firstAttribute="trailing" secondItem="Bkd-BV-42G" secondAttribute="trailing" id="Ml0-XA-t6e"/>
+                            <constraint firstAttribute="bottom" secondItem="Bkd-BV-42G" secondAttribute="bottom" id="iFq-qb-J0v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9c-q9-0gk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="auth" width="3000" height="4500"/>
+    </resources>
+</document>
