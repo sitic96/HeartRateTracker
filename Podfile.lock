@@ -55,26 +55,26 @@ PODS:
   - GoogleUtilities/UserDefaults (6.1.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
-  - KZFileWatchers (1.0.6)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - Stylist (0.2.2):
-    - KZFileWatchers (~> 1.0.5)
-    - Yams (~> 1.0.1)
-  - SwiftGifOrigin (1.7.0)
-  - Yams (1.0.2)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
-  - Stylist
-  - SwiftGifOrigin (~> 1.7.0)
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -84,11 +84,11 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
-    - KZFileWatchers
     - nanopb
-    - Stylist
-    - SwiftGifOrigin
-    - Yams
+  trunk:
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 SPEC CHECKSUMS:
   Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
@@ -100,12 +100,11 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
   GoogleUtilities: 84df567c76ca84f67b7bb40e769fdd4acc746a10
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
-  KZFileWatchers: 029e57c853bed7e6703786937135df5cb993fead
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  Stylist: ed84f15e18490b8f6f6674e45f1cdba21a3d36ac
-  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
-  Yams: fcdf51397d30c85f8ac780e917bcf7bdf6bc654b
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: 4b5680127cf67587ad41b27fa4d01de0ffcf8baf
+PODFILE CHECKSUM: cd64fc799e5b4d1ab88ca625bd6eac26d43c3153
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

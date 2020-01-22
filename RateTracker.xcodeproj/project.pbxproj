@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,6 +47,11 @@
 		4972A68622CCC94D007971E2 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68522CCC94D007971E2 /* UserError.swift */; };
 		4972A68A22CCCDC6007971E2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972A68922CCCDC6007971E2 /* CoreDataManager.swift */; };
 		49899071239EF94400AFFB02 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49899070239EF94400AFFB02 /* AuthViewController.swift */; };
+		49B8121B23D85F3000693EEC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8121A23D85F3000693EEC /* AlertViewController.swift */; };
+		49B8121D23D85F4000693EEC /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B8121C23D85F4000693EEC /* Alert.storyboard */; };
+		49B8121F23D86B9500693EEC /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8121E23D86B9500693EEC /* AlertViewModel.swift */; };
+		49B8122423D86D9A00693EEC /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8122323D86D9A00693EEC /* OptionButton.swift */; };
+		49B8122623D86DE600693EEC /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8122523D86DE600693EEC /* Palette.swift */; };
 		49C2146322C4EC32004A1560 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146222C4EC32004A1560 /* Const.swift */; };
 		49C2146822C4EFA1004A1560 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146722C4EFA1004A1560 /* StoryboardHelper.swift */; };
 		49C2146A22C4F994004A1560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49C2146922C4F994004A1560 /* GoogleService-Info.plist */; };
@@ -106,6 +111,11 @@
 		4972A68522CCC94D007971E2 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		4972A68922CCCDC6007971E2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		49899070239EF94400AFFB02 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		49B8121A23D85F3000693EEC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		49B8121C23D85F4000693EEC /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		49B8121E23D86B9500693EEC /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		49B8122323D86D9A00693EEC /* OptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
+		49B8122523D86DE600693EEC /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		49C2146222C4EC32004A1560 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		49C2146722C4EFA1004A1560 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		49C2146922C4F994004A1560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -142,6 +152,7 @@
 			children = (
 				4916B72223BCE1A400B601AF /* UI Elements */,
 				4916B71823BCA1C800B601AF /* Protocols */,
+				49B8122523D86DE600693EEC /* Palette.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -158,6 +169,8 @@
 		4916B72223BCE1A400B601AF /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				49B8122223D86D8800693EEC /* OptionButton */,
+				49B8121923D85F0E00693EEC /* BaseAlert */,
 				4953750C239AF364009F4099 /* UnderlinedTextField */,
 				4916B72323BCE1AF00B601AF /* RTButton */,
 			);
@@ -286,8 +299,8 @@
 		4953750C239AF364009F4099 /* UnderlinedTextField */ = {
 			isa = PBXGroup;
 			children = (
-				4953750D239AF38B009F4099 /* UnderlinedTextField.swift */,
 				4953750F239AF399009F4099 /* UnderlinedTextField.xib */,
+				4953750D239AF38B009F4099 /* UnderlinedTextField.swift */,
 			);
 			path = UnderlinedTextField;
 			sourceTree = "<group>";
@@ -331,6 +344,24 @@
 				4972A68922CCCDC6007971E2 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		49B8121923D85F0E00693EEC /* BaseAlert */ = {
+			isa = PBXGroup;
+			children = (
+				49B8121C23D85F4000693EEC /* Alert.storyboard */,
+				49B8121A23D85F3000693EEC /* AlertViewController.swift */,
+				49B8121E23D86B9500693EEC /* AlertViewModel.swift */,
+			);
+			path = BaseAlert;
+			sourceTree = "<group>";
+		};
+		49B8122223D86D8800693EEC /* OptionButton */ = {
+			isa = PBXGroup;
+			children = (
+				49B8122323D86D9A00693EEC /* OptionButton.swift */,
+			);
+			path = OptionButton;
 			sourceTree = "<group>";
 		};
 		49C2146122C4EC21004A1560 /* Global */ = {
@@ -507,6 +538,7 @@
 				495374F9239AD97F009F4099 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				49537504239AD97F009F4099 /* Montserrat-Light.ttf in Resources */,
 				495374FA239AD97F009F4099 /* Montserrat-LightItalic.ttf in Resources */,
+				49B8121D23D85F4000693EEC /* Alert.storyboard in Resources */,
 				495374FB239AD97F009F4099 /* Montserrat-ThinItalic.ttf in Resources */,
 				49537502239AD97F009F4099 /* Montserrat-BoldItalic.ttf in Resources */,
 				49537510239AF399009F4099 /* UnderlinedTextField.xib in Resources */,
@@ -561,28 +593,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/KZFileWatchers/KZFileWatchers.framework",
-				"${BUILT_PRODUCTS_DIR}/Stylist/Stylist.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
-				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KZFileWatchers.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stylist.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -599,6 +614,7 @@
 				4916B72723BCE7B000B601AF /* AppCoordinator.swift in Sources */,
 				49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */,
 				49DA698223D3137A008E0AC8 /* RootCoordinator.swift in Sources */,
+				49B8121F23D86B9500693EEC /* AlertViewModel.swift in Sources */,
 				4972A68622CCC94D007971E2 /* UserError.swift in Sources */,
 				4972A67A22CCBD60007971E2 /* SessionManager.swift in Sources */,
 				4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */,
@@ -612,14 +628,17 @@
 				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
 				49DA697C23D3128A008E0AC8 /* RootViewController.swift in Sources */,
 				49537513239AF522009F4099 /* NibLoadable.swift in Sources */,
+				49B8122423D86D9A00693EEC /* OptionButton.swift in Sources */,
 				49537516239AFB80009F4099 /* UIView+border.swift in Sources */,
 				4916B71C23BCA6A900B601AF /* AuthCoordinator.swift in Sources */,
 				495374E5239AD7D9009F4099 /* User.swift in Sources */,
 				49DA697723D31196008E0AC8 /* Coordinator.swift in Sources */,
 				49C2146322C4EC32004A1560 /* Const.swift in Sources */,
 				4972A68A22CCCDC6007971E2 /* CoreDataManager.swift in Sources */,
+				49B8121B23D85F3000693EEC /* AlertViewController.swift in Sources */,
 				4916B72523BCE1E600B601AF /* RTButton.swift in Sources */,
 				4916B71A23BCA1D800B601AF /* Localizable.swift in Sources */,
+				49B8122623D86DE600693EEC /* Palette.swift in Sources */,
 				49DA697E23D31307008E0AC8 /* RootViewModel.swift in Sources */,
 				49C2146822C4EFA1004A1560 /* StoryboardHelper.swift in Sources */,
 			);
