@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 fileprivate enum ShownPage {
     case login
@@ -35,6 +37,21 @@ class AuthViewController: UIViewController, StoryboardInstantiable {
 
     var viewModel: AuthViewModelProtocol!
     private var shownPage: ShownPage = .login
+    private let bag = DisposeBag()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindViewModel()
+    }
+
+    private func bindViewModel() {
+        viewModel.isLoading
+            .bind(to: self.signUpRTButton.rx.isLoading)
+            .disposed(by: bag)
+        viewModel.isLoading
+        .bind(to: self.loginRTButton.rx.isLoading)
+        .disposed(by: bag)
+    }
 
     // MARK: - IBAction
 
@@ -51,7 +68,6 @@ class AuthViewController: UIViewController, StoryboardInstantiable {
     }
 
     @IBAction func loginButtonClicked(_ sender: Any) {
-        setupViewForLoading()
         viewModel.viewDidSelectLogin(email: emailLoginTextField.text,
                                      password: passwordLoginTextField.text)
     }
@@ -61,24 +77,12 @@ class AuthViewController: UIViewController, StoryboardInstantiable {
     }
     
     @IBAction func signupButtonClicked(_ sender: Any) {
-        setupViewForLoading()
         viewModel.viewDidSelectSignUp(name: nameSignUpTextView.text,
                                       email: emailSignUpTextField.text,
                                       password: passwordSignUpTextField.text)
     }
 
     // MARK: - Private
-
-    private func setupViewForLoading() {
-        scrollView.isScrollEnabled = false
-
-        switch shownPage {
-        case .login:
-            loginRTButton.isLoading = true
-        case .signUp:
-            signUpRTButton.isLoading = true
-        }
-    }
 }
 
 fileprivate extension Const {

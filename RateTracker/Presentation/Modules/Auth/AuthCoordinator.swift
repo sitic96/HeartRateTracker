@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AuthCoordinatorProtocol: AnyObject {
+protocol AuthCoordinatorProtocol: Coordinator, AnyObject {
     func showMainController()
 }
 

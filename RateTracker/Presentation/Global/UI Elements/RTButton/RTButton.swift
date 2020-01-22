@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class RTButton: UIButton {
 
@@ -51,6 +53,15 @@ class RTButton: UIButton {
                 self.alpha = 0.7
             }
             super.isEnabled = newValue
+        }
+    }
+}
+
+extension Reactive where Base: RTButton {
+    var isLoading: Binder<Bool> {
+        return Binder(self.base) {
+            view, isLoading in
+            view.isLoading = isLoading
         }
     }
 }

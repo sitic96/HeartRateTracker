@@ -11,6 +11,12 @@ import UIKit
 class UnderlinedTextField: UIView, NibLoadable {
     @IBOutlet private weak var textField: UITextField!
 
+    @IBInspectable var shouldHideText: Bool = false {
+        didSet {
+            textField.isSecureTextEntry = shouldHideText
+        }
+    }
+
     @IBInspectable var placeholder: String = "" {
         didSet {
             self.textField.placeholder = placeholder
