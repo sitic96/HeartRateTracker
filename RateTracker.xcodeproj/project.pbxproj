@@ -55,6 +55,10 @@
 		49C2146322C4EC32004A1560 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146222C4EC32004A1560 /* Const.swift */; };
 		49C2146822C4EFA1004A1560 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2146722C4EFA1004A1560 /* StoryboardHelper.swift */; };
 		49C2146A22C4F994004A1560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49C2146922C4F994004A1560 /* GoogleService-Info.plist */; };
+		49D0B93823E2F21D007E38B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D0B93723E2F21D007E38B6 /* Main.storyboard */; };
+		49D0B94323E2F808007E38B6 /* PastRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D0B94223E2F808007E38B6 /* PastRecords.storyboard */; };
+		49D0B94523E2F8C9007E38B6 /* PastRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B94423E2F8C9007E38B6 /* PastRecordsViewController.swift */; };
+		49D0B94723E2F912007E38B6 /* PastRecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B94623E2F912007E38B6 /* PastRecordsViewModel.swift */; };
 		49DA697723D31196008E0AC8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA697623D31196008E0AC8 /* Coordinator.swift */; };
 		49DA697A23D31273008E0AC8 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DA697923D31273008E0AC8 /* Root.storyboard */; };
 		49DA697C23D3128A008E0AC8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA697B23D3128A008E0AC8 /* RootViewController.swift */; };
@@ -119,6 +123,10 @@
 		49C2146222C4EC32004A1560 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		49C2146722C4EFA1004A1560 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		49C2146922C4F994004A1560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		49D0B93723E2F21D007E38B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		49D0B94223E2F808007E38B6 /* PastRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PastRecords.storyboard; sourceTree = "<group>"; };
+		49D0B94423E2F8C9007E38B6 /* PastRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsViewController.swift; sourceTree = "<group>"; };
+		49D0B94623E2F912007E38B6 /* PastRecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsViewModel.swift; sourceTree = "<group>"; };
 		49DA697623D31196008E0AC8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		49DA697923D31273008E0AC8 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		49DA697B23D3128A008E0AC8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +256,7 @@
 				49DA697623D31196008E0AC8 /* Coordinator.swift */,
 				49DA697823D31239008E0AC8 /* Root */,
 				495374E0239AD745009F4099 /* Auth */,
+				49D0B93623E2EBF5007E38B6 /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -382,6 +391,25 @@
 				49447FD322C5168B00F689C5 /* EmailValidator.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		49D0B93623E2EBF5007E38B6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				49D0B93923E2F2D2007E38B6 /* PastRecords */,
+				49D0B93723E2F21D007E38B6 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		49D0B93923E2F2D2007E38B6 /* PastRecords */ = {
+			isa = PBXGroup;
+			children = (
+				49D0B94223E2F808007E38B6 /* PastRecords.storyboard */,
+				49D0B94423E2F8C9007E38B6 /* PastRecordsViewController.swift */,
+				49D0B94623E2F912007E38B6 /* PastRecordsViewModel.swift */,
+			);
+			path = PastRecords;
 			sourceTree = "<group>";
 		};
 		49DA697823D31239008E0AC8 /* Root */ = {
@@ -539,6 +567,7 @@
 				49537504239AD97F009F4099 /* Montserrat-Light.ttf in Resources */,
 				495374FA239AD97F009F4099 /* Montserrat-LightItalic.ttf in Resources */,
 				49B8121D23D85F4000693EEC /* Alert.storyboard in Resources */,
+				49D0B93823E2F21D007E38B6 /* Main.storyboard in Resources */,
 				495374FB239AD97F009F4099 /* Montserrat-ThinItalic.ttf in Resources */,
 				49537502239AD97F009F4099 /* Montserrat-BoldItalic.ttf in Resources */,
 				49537510239AF399009F4099 /* UnderlinedTextField.xib in Resources */,
@@ -555,6 +584,7 @@
 				4953750A239AD97F009F4099 /* Montserrat-Thin.ttf in Resources */,
 				49537507239AD97F009F4099 /* Montserrat-Italic.ttf in Resources */,
 				49537508239AD97F009F4099 /* Montserrat-MediumItalic.ttf in Resources */,
+				49D0B94323E2F808007E38B6 /* PastRecords.storyboard in Resources */,
 				7223640A2201D97E009AD1E9 /* Assets.xcassets in Resources */,
 				49447FE722C6337600F689C5 /* Localizable.strings in Resources */,
 				49537505239AD97F009F4099 /* Montserrat-Medium.ttf in Resources */,
@@ -622,6 +652,7 @@
 				49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */,
 				722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */,
 				4916B71623BC9E6D00B601AF /* AuthViewModel.swift in Sources */,
+				49D0B94723E2F912007E38B6 /* PastRecordsViewModel.swift in Sources */,
 				4953750E239AF38B009F4099 /* UnderlinedTextField.swift in Sources */,
 				49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */,
 				49DA698423D31568008E0AC8 /* StoryboardInstantiable.swift in Sources */,
@@ -640,6 +671,7 @@
 				4916B71A23BCA1D800B601AF /* Localizable.swift in Sources */,
 				49B8122623D86DE600693EEC /* Palette.swift in Sources */,
 				49DA697E23D31307008E0AC8 /* RootViewModel.swift in Sources */,
+				49D0B94523E2F8C9007E38B6 /* PastRecordsViewController.swift in Sources */,
 				49C2146822C4EFA1004A1560 /* StoryboardHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
