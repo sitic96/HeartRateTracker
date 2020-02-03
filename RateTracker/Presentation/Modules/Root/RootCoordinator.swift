@@ -20,7 +20,7 @@ class RootCoordinator: Coordinator {
         vc.viewModel = RootViewModel(coordinator: self)
         pushViewController(vc, animated: false)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,9 +28,12 @@ class RootCoordinator: Coordinator {
 
 extension RootCoordinator: RootCoordinatorProtocol {
     func showMainView() {
-
+        if let vc = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController() {
+            vc.modalPresentationStyle = .overFullScreen
+            pushViewController(vc, animated: true)
+        }
     }
-
+    
     func showAuthView() {
         let authCoordinator = AuthCoordinator()
         authCoordinator.modalPresentationStyle = .overFullScreen

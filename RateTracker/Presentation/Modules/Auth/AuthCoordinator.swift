@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AuthCoordinatorProtocol: Coordinator, AnyObject {
+protocol AuthCoordinatorProtocol: Coordinator {
     func showMainController()
 }
 
@@ -27,6 +27,9 @@ class AuthCoordinator: Coordinator {
 
 extension AuthCoordinator: AuthCoordinatorProtocol {
     func showMainController() {
-        
+        if let vc = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController() {
+            vc.modalPresentationStyle = .overFullScreen
+            pushViewController(vc, animated: true)
+        }
     }
 }

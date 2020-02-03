@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 protocol RootViewModelProtocol {
     func viewDidAppear()
@@ -22,6 +23,10 @@ class RootViewModel {
 
 extension RootViewModel: RootViewModelProtocol {
     func viewDidAppear() {
-        coordinator?.showAuthView()
+        if Auth.auth().currentUser != nil {
+            coordinator?.showMainView()
+        } else {
+            coordinator?.showAuthView()
+        }
     }
 }
