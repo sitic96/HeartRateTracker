@@ -24,3 +24,13 @@
 // MARK: - Error handling
 
 "Error" = "Error";
+
+// MARK: - Sensor Position
+
+"Chest" = "Chest";
+"Wrist" = "Wrist";
+"Finger" = "Finger";
+"Hand" = "Hand";
+"Ear lobe" = "Ear lobe";
+"Foot" = "Foot";
+"Unknown" = "Unknown";

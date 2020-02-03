@@ -13,6 +13,7 @@
 		4916B71C23BCA6A900B601AF /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4916B71B23BCA6A900B601AF /* AuthCoordinator.swift */; };
 		4916B72523BCE1E600B601AF /* RTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4916B72423BCE1E600B601AF /* RTButton.swift */; };
 		4916B72723BCE7B000B601AF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4916B72623BCE7B000B601AF /* AppCoordinator.swift */; };
+		49235D0F23E84AF500990A38 /* HeartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D0E23E84AF500990A38 /* HeartData.swift */; };
 		49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FD322C5168B00F689C5 /* EmailValidator.swift */; };
 		49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */; };
 		49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FE222C630F700F689C5 /* LocalizableKeys.swift */; };
@@ -59,6 +60,9 @@
 		49D0B94323E2F808007E38B6 /* PastRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D0B94223E2F808007E38B6 /* PastRecords.storyboard */; };
 		49D0B94523E2F8C9007E38B6 /* PastRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B94423E2F8C9007E38B6 /* PastRecordsViewController.swift */; };
 		49D0B94723E2F912007E38B6 /* PastRecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B94623E2F912007E38B6 /* PastRecordsViewModel.swift */; };
+		49D0B94A23E30E34007E38B6 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B94923E30E34007E38B6 /* BluetoothManager.swift */; };
+		49D0B94C23E31E06007E38B6 /* SensorPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B94B23E31E06007E38B6 /* SensorPosition.swift */; };
+		49D0B94F23E4298D007E38B6 /* HeartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0B94E23E4298D007E38B6 /* HeartManager.swift */; };
 		49DA697723D31196008E0AC8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA697623D31196008E0AC8 /* Coordinator.swift */; };
 		49DA697A23D31273008E0AC8 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DA697923D31273008E0AC8 /* Root.storyboard */; };
 		49DA697C23D3128A008E0AC8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA697B23D3128A008E0AC8 /* RootViewController.swift */; };
@@ -79,6 +83,7 @@
 		4916B71B23BCA6A900B601AF /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		4916B72423BCE1E600B601AF /* RTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTButton.swift; sourceTree = "<group>"; };
 		4916B72623BCE7B000B601AF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		49235D0E23E84AF500990A38 /* HeartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartData.swift; sourceTree = "<group>"; };
 		49447FD322C5168B00F689C5 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+loadFromNib.swift"; sourceTree = "<group>"; };
 		49447FE222C630F700F689C5 /* LocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKeys.swift; sourceTree = "<group>"; };
@@ -127,6 +132,9 @@
 		49D0B94223E2F808007E38B6 /* PastRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PastRecords.storyboard; sourceTree = "<group>"; };
 		49D0B94423E2F8C9007E38B6 /* PastRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsViewController.swift; sourceTree = "<group>"; };
 		49D0B94623E2F912007E38B6 /* PastRecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsViewModel.swift; sourceTree = "<group>"; };
+		49D0B94923E30E34007E38B6 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		49D0B94B23E31E06007E38B6 /* SensorPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorPosition.swift; sourceTree = "<group>"; };
+		49D0B94E23E4298D007E38B6 /* HeartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartManager.swift; sourceTree = "<group>"; };
 		49DA697623D31196008E0AC8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		49DA697923D31273008E0AC8 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		49DA697B23D3128A008E0AC8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +214,8 @@
 		49447FE022C630CA00F689C5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				49D0B94D23E4295D007E38B6 /* HeartManager */,
+				49D0B94823E30E19007E38B6 /* BluetoothManager */,
 				4972A68822CCCDB2007971E2 /* CoreData */,
 				4972A67722CCBD45007971E2 /* Session */,
 				49447FE122C630D700F689C5 /* Locale */,
@@ -276,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				495374E4239AD7D9009F4099 /* User.swift */,
+				49D0B94B23E31E06007E38B6 /* SensorPosition.swift */,
+				49235D0E23E84AF500990A38 /* HeartData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -410,6 +422,22 @@
 				49D0B94623E2F912007E38B6 /* PastRecordsViewModel.swift */,
 			);
 			path = PastRecords;
+			sourceTree = "<group>";
+		};
+		49D0B94823E30E19007E38B6 /* BluetoothManager */ = {
+			isa = PBXGroup;
+			children = (
+				49D0B94923E30E34007E38B6 /* BluetoothManager.swift */,
+			);
+			path = BluetoothManager;
+			sourceTree = "<group>";
+		};
+		49D0B94D23E4295D007E38B6 /* HeartManager */ = {
+			isa = PBXGroup;
+			children = (
+				49D0B94E23E4298D007E38B6 /* HeartManager.swift */,
+			);
+			path = HeartManager;
 			sourceTree = "<group>";
 		};
 		49DA697823D31239008E0AC8 /* Root */ = {
@@ -645,9 +673,12 @@
 				49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */,
 				49DA698223D3137A008E0AC8 /* RootCoordinator.swift in Sources */,
 				49B8121F23D86B9500693EEC /* AlertViewModel.swift in Sources */,
+				49D0B94C23E31E06007E38B6 /* SensorPosition.swift in Sources */,
 				4972A68622CCC94D007971E2 /* UserError.swift in Sources */,
 				4972A67A22CCBD60007971E2 /* SessionManager.swift in Sources */,
+				49D0B94F23E4298D007E38B6 /* HeartManager.swift in Sources */,
 				4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */,
+				49D0B94A23E30E34007E38B6 /* BluetoothManager.swift in Sources */,
 				49899071239EF94400AFFB02 /* AuthViewController.swift in Sources */,
 				49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */,
 				722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */,
@@ -658,6 +689,7 @@
 				49DA698423D31568008E0AC8 /* StoryboardInstantiable.swift in Sources */,
 				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
 				49DA697C23D3128A008E0AC8 /* RootViewController.swift in Sources */,
+				49235D0F23E84AF500990A38 /* HeartData.swift in Sources */,
 				49537513239AF522009F4099 /* NibLoadable.swift in Sources */,
 				49B8122423D86D9A00693EEC /* OptionButton.swift in Sources */,
 				49537516239AFB80009F4099 /* UIView+border.swift in Sources */,
