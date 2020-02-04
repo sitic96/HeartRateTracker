@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreHeartData" representedClassName="CoreHeartData" syncable="YES" codeGenerationType="category">
+        <attribute name="bpm" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rrValues" attributeType="Transformable" customClassName="[Double]"/>
+        <attribute name="timeStamp" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <elements>
+        <element name="CoreHeartData" positionX="-63" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
