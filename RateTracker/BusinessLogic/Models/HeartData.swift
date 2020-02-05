@@ -11,4 +11,5 @@ import Foundation
 struct HeartData {
     var bpm: Int
     var rrValues: [Double]
+    var date: Date
 }

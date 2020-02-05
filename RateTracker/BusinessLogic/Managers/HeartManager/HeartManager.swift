@@ -24,6 +24,8 @@ class HeartManager {
 
     private var bleManager: BluetoothManagerProtocol
     var sensorPosition = BehaviorRelay<SensorPosition>(value: .unknown)
+    
+    // Current session data
     var heartData = BehaviorRelay<[HeartData]>(value: [])
 
     private init() {
@@ -74,7 +76,7 @@ class HeartManager {
                 offset1 = offset1 + 2
             }
         }
-        return HeartData(bpm: bpm, rrValues: rrValues)
+        return HeartData(bpm: bpm, rrValues: rrValues, date: Date())
     }
 
     private func onNewValue(_ data: Data?) {
@@ -94,6 +96,7 @@ class HeartManager {
 
 extension HeartManager: HeartManagerProtocol {
     func start() {
+        heartData.accept([])
         bleManager.startListening()
         bleManager.didReciveNewValue = onNewValue(_:)
         bleManager.didRecivePosition = onPositionValue(_:)
