@@ -22,16 +22,14 @@ protocol HeartManagerProtocol {
 class HeartManager {
     static let shared = HeartManager()
 
-    private let saveManager: HeartDataSaveManagerProtocol
     private var bleManager: BluetoothManagerProtocol
     var sensorPosition = BehaviorRelay<SensorPosition>(value: .unknown)
     
     // Current session data
-    lazy var heartData = BehaviorRelay<[HeartData]>(value: [])
+    var heartData = BehaviorRelay<[HeartData]>(value: [])
 
     private init() {
         bleManager = BluetoothManager.shared
-        saveManager = HeartDataSaveManager(coreData: CoreDataManager.shared)
     }
 
     private func sensorLocation(from data: Data?) -> SensorPosition {
@@ -85,17 +83,7 @@ class HeartManager {
         guard let heartInfo = heartData(from: data) else {
             return
         }
-        saveManager.save(heartInfo) { [weak self] result in
-            if let strongSelf = self {
-                switch result {
-                case .success:
-                    strongSelf.heartData.accept(strongSelf.heartData.value
-                        + [heartInfo])
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
-        }
+        heartData.accept(heartData.value + [heartInfo])
     }
 
     private func onPositionValue(_ data: Data?) {
@@ -108,6 +96,7 @@ class HeartManager {
 
 extension HeartManager: HeartManagerProtocol {
     func start() {
+        heartData.accept([])
         bleManager.startListening()
         bleManager.didReciveNewValue = onNewValue(_:)
         bleManager.didRecivePosition = onPositionValue(_:)

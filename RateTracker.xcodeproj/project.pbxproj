@@ -17,8 +17,10 @@
 		49235D1323E98EC600990A38 /* HeartTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49235D1123E98EC600990A38 /* HeartTracker.xcdatamodeld */; };
 		49235D1623E98FFE00990A38 /* CoreHeartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D1523E98FFE00990A38 /* CoreHeartData.swift */; };
 		49235D1823E9912D00990A38 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D1723E9912D00990A38 /* CoreDataError.swift */; };
-		49235D1D23E9996C00990A38 /* HeartDataSaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D1C23E9996C00990A38 /* HeartDataSaveManager.swift */; };
+		49235D1D23E9996C00990A38 /* HeartScanSaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D1C23E9996C00990A38 /* HeartScanSaveManager.swift */; };
 		49235D1F23E99A4B00990A38 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D1E23E99A4B00990A38 /* SaveManager.swift */; };
+		49235D8723EAC05E00990A38 /* HeartScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D8623EAC05E00990A38 /* HeartScan.swift */; };
+		49235D8923EAD7C900990A38 /* CoreHeartScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235D8823EAD7C900990A38 /* CoreHeartScan.swift */; };
 		49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FD322C5168B00F689C5 /* EmailValidator.swift */; };
 		49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */; };
 		49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FE222C630F700F689C5 /* LocalizableKeys.swift */; };
@@ -92,8 +94,10 @@
 		49235D1223E98EC600990A38 /* HeartTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeartTracker.xcdatamodel; sourceTree = "<group>"; };
 		49235D1523E98FFE00990A38 /* CoreHeartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreHeartData.swift; sourceTree = "<group>"; };
 		49235D1723E9912D00990A38 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
-		49235D1C23E9996C00990A38 /* HeartDataSaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartDataSaveManager.swift; sourceTree = "<group>"; };
+		49235D1C23E9996C00990A38 /* HeartScanSaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScanSaveManager.swift; sourceTree = "<group>"; };
 		49235D1E23E99A4B00990A38 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
+		49235D8623EAC05E00990A38 /* HeartScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartScan.swift; sourceTree = "<group>"; };
+		49235D8823EAD7C900990A38 /* CoreHeartScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreHeartScan.swift; sourceTree = "<group>"; };
 		49447FD322C5168B00F689C5 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+loadFromNib.swift"; sourceTree = "<group>"; };
 		49447FE222C630F700F689C5 /* LocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKeys.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				49235D1523E98FFE00990A38 /* CoreHeartData.swift */,
+				49235D8823EAD7C900990A38 /* CoreHeartScan.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -232,7 +237,7 @@
 			children = (
 				4972A68822CCCDB2007971E2 /* CoreData */,
 				49235D1E23E99A4B00990A38 /* SaveManager.swift */,
-				49235D1C23E9996C00990A38 /* HeartDataSaveManager.swift */,
+				49235D1C23E9996C00990A38 /* HeartScanSaveManager.swift */,
 			);
 			path = SaveManager;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				495374E4239AD7D9009F4099 /* User.swift */,
 				49D0B94B23E31E06007E38B6 /* SensorPosition.swift */,
 				49235D0E23E84AF500990A38 /* HeartData.swift */,
+				49235D8623EAC05E00990A38 /* HeartScan.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -713,13 +719,14 @@
 				49DA698223D3137A008E0AC8 /* RootCoordinator.swift in Sources */,
 				49B8121F23D86B9500693EEC /* AlertViewModel.swift in Sources */,
 				49D0B94C23E31E06007E38B6 /* SensorPosition.swift in Sources */,
-				49235D1D23E9996C00990A38 /* HeartDataSaveManager.swift in Sources */,
+				49235D1D23E9996C00990A38 /* HeartScanSaveManager.swift in Sources */,
 				4972A68622CCC94D007971E2 /* UserError.swift in Sources */,
 				4972A67A22CCBD60007971E2 /* SessionManager.swift in Sources */,
 				49D0B94F23E4298D007E38B6 /* HeartManager.swift in Sources */,
 				4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */,
 				49D0B94A23E30E34007E38B6 /* BluetoothManager.swift in Sources */,
 				49899071239EF94400AFFB02 /* AuthViewController.swift in Sources */,
+				49235D8923EAD7C900990A38 /* CoreHeartScan.swift in Sources */,
 				49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */,
 				49235D1F23E99A4B00990A38 /* SaveManager.swift in Sources */,
 				722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */,
@@ -731,6 +738,7 @@
 				49447FED22C6351600F689C5 /* String+localized.swift in Sources */,
 				49DA697C23D3128A008E0AC8 /* RootViewController.swift in Sources */,
 				49235D1323E98EC600990A38 /* HeartTracker.xcdatamodeld in Sources */,
+				49235D8723EAC05E00990A38 /* HeartScan.swift in Sources */,
 				49235D0F23E84AF500990A38 /* HeartData.swift in Sources */,
 				49537513239AF522009F4099 /* NibLoadable.swift in Sources */,
 				49B8122423D86D9A00693EEC /* OptionButton.swift in Sources */,

@@ -4,8 +4,18 @@
         <attribute name="bpm" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rrValues" attributeType="Transformable" customClassName="[Double]"/>
         <attribute name="timeStamp" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="scan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreHeartScan" inverseName="heartData" inverseEntity="CoreHeartScan"/>
+    </entity>
+    <entity name="CoreHeartScan" representedClassName="CoreHeartScan" syncable="YES" codeGenerationType="category">
+        <attribute name="finishedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="sensorPosition" optional="YES" attributeType="String"/>
+        <attribute name="startedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="heartData" toMany="YES" deletionRule="Nullify" destinationEntity="CoreHeartData" inverseName="scan" inverseEntity="CoreHeartData"/>
     </entity>
     <elements>
-        <element name="CoreHeartData" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="CoreHeartData" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="CoreHeartScan" positionX="-54" positionY="18" width="128" height="133"/>
     </elements>
 </model>

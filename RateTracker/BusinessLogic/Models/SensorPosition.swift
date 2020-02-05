@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SensorPosition {
+enum SensorPosition: String {
     case chest
     case wrist
     case finger
@@ -16,6 +16,25 @@ enum SensorPosition {
     case earLobe
     case foot
     case unknown
+
+    init(from string: String) {
+        switch string.lowercased() {
+        case "chest":
+            self = .chest
+        case "wrist":
+            self = .wrist
+        case "finger":
+            self = .finger
+        case "hand":
+            self = .hand
+        case "earLobe":
+            self = .earLobe
+        case "foot":
+            self = .foot
+        default:
+            self = .unknown
+        }
+    }
 
     init(byte: Data.Element) {
         switch byte {
