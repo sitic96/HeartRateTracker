@@ -9,5 +9,18 @@
 import Foundation
 
 struct User {
-    
+    let id: String
+    let name: String
+    let email: String
+    let birthDate: Date?
+
+    init(id: String,
+         name: String,
+         email: String,
+         birthDate: Date?) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.birthDate = birthDate
+    }
 }

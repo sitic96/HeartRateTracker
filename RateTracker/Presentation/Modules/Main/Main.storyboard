@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="FSr-RY-dhx">
             <objects>
-                <tabBarController id="rdP-g0-s7N" sceneMemberID="viewController">
+                <tabBarController id="rdP-g0-s7N" customClass="MainTabBarController" customModule="RateTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y3E-Sy-cKl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,6 +21,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Nto-Pn-j0v" kind="relationship" relationship="viewControllers" id="Rk5-2q-c77"/>
+                        <segue destination="jem-mp-USq" kind="relationship" relationship="viewControllers" id="RwI-CA-3PQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suB-5O-BTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -35,7 +36,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdj-Hp-UKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="-209"/>
+            <point key="canvasLocation" x="-67" y="-532"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="CaR-ce-X8Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="jem-mp-USq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="g0z-Ol-ENo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PIT-J6-WQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="-567"/>
         </scene>
     </scenes>
 </document>
