@@ -21,12 +21,17 @@ protocol AuthViewModelProtocol {
 
 class AuthViewModel {
     private weak var coordinator: AuthCoordinatorProtocol?
-    
+
+    private let userSaveManager: UserSaveManagerProtocol
+    private var ref: DatabaseReference!
     var isLoading = BehaviorRelay(value: false)
     var errorMessage = BehaviorRelay(value: "")
     
-    init(coordinator: AuthCoordinatorProtocol) {
+    init(coordinator: AuthCoordinatorProtocol,
+         userSaveManager: UserSaveManagerProtocol) {
         self.coordinator = coordinator
+        self.userSaveManager = userSaveManager
+        ref = Database.database().reference()
     }
     
 }
@@ -58,7 +63,9 @@ extension AuthViewModel: AuthViewModelProtocol {
         guard let email = email,
             !email.isEmpty,
             let password = password,
-            !password.isEmpty else {
+            !password.isEmpty,
+            let name = name,
+            !name.isEmpty else {
                 coordinator?.showError(errorMessage: "Email or password is empty")
                 return
         }
@@ -71,7 +78,18 @@ extension AuthViewModel: AuthViewModelProtocol {
             if let error = error {
                 strongSelf.coordinator?.showError(errorMessage: error.localizedDescription)
             } else {
-                strongSelf.coordinator?.showMainController()
+                let userID = Auth.auth().currentUser!.uid
+                strongSelf.ref.child("users").child(userID).setValue(["name": name,
+                                                                      "email": email])
+                strongSelf.userSaveManager.edit(with: User(id: userID, name: name,
+                                                           email: email, birthDate: nil)) { result in
+                                                            switch result {
+                                                            case .success:
+                                                                strongSelf.coordinator?.showMainController()
+                                                            case .failure(let saveError):
+                                                                print(saveError.localizedDescription)
+                                                            }
+                }
             }
         }
     }

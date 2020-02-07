@@ -8,6 +8,7 @@ target 'RateTracker' do
   # Pods for RateTracker
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'RxSwift'
   pod 'RxCocoa'
 
