@@ -27,6 +27,7 @@
 		49235DA923EC428400990A38 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235DA823EC428400990A38 /* MainTabBarController.swift */; };
 		49235DAB23ED8B0F00990A38 /* CoreUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235DAA23ED8B0F00990A38 /* CoreUser.swift */; };
 		49235DAD23ED8C3C00990A38 /* UserSaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49235DAC23ED8C3C00990A38 /* UserSaveManager.swift */; };
+		49235DAF23ED954800990A38 /* MockImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49235DAE23ED954800990A38 /* MockImages.xcassets */; };
 		49447FD422C5168B00F689C5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FD322C5168B00F689C5 /* EmailValidator.swift */; };
 		49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */; };
 		49447FE322C630F700F689C5 /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49447FE222C630F700F689C5 /* LocalizableKeys.swift */; };
@@ -110,6 +111,7 @@
 		49235DA823EC428400990A38 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		49235DAA23ED8B0F00990A38 /* CoreUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUser.swift; sourceTree = "<group>"; };
 		49235DAC23ED8C3C00990A38 /* UserSaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaveManager.swift; sourceTree = "<group>"; };
+		49235DAE23ED954800990A38 /* MockImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MockImages.xcassets; sourceTree = "<group>"; };
 		49447FD322C5168B00F689C5 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		49447FDE22C6271400F689C5 /* UIViewController+loadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+loadFromNib.swift"; sourceTree = "<group>"; };
 		49447FE222C630F700F689C5 /* LocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKeys.swift; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				722364092201D97E009AD1E9 /* Assets.xcassets */,
+				49235DAE23ED954800990A38 /* MockImages.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				495374E2239AD761009F4099 /* Auth.storyboard in Resources */,
 				495374FC239AD97F009F4099 /* Montserrat-Bold.ttf in Resources */,
 				49C2146A22C4F994004A1560 /* GoogleService-Info.plist in Resources */,
+				49235DAF23ED954800990A38 /* MockImages.xcassets in Resources */,
 				49537506239AD97F009F4099 /* Montserrat-SemiBold.ttf in Resources */,
 				495374FD239AD97F009F4099 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				49537500239AD97F009F4099 /* Montserrat-ExtraLight.ttf in Resources */,
