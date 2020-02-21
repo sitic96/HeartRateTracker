@@ -1,29 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AjQ-LT-w26">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile-->
         <scene sceneID="192-m8-JeJ">
             <objects>
                 <viewController id="AjQ-LT-w26" customClass="ProfileViewController" customModule="RateTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ASU-3M-wnc">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ASU-3M-wnc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-pD-18O">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAs-gp-i1i" userLabel="back">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth" translatesAutoresizingMaskIntoConstraints="NO" id="SbQ-jA-IzP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rV-Fs-cOX">
+                                        <rect key="frame" x="132" y="75" width="150" height="150"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handsome_guy" translatesAutoresizingMaskIntoConstraints="NO" id="Lcc-Kn-7aL">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Lcc-Kn-7aL" firstAttribute="leading" secondItem="4rV-Fs-cOX" secondAttribute="leading" id="0KF-YF-Ekt"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lcc-Kn-7aL" secondAttribute="bottom" id="IQ8-U0-fOh"/>
+                                            <constraint firstAttribute="width" secondItem="4rV-Fs-cOX" secondAttribute="height" multiplier="1:1" id="Nkr-pH-Ike"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lcc-Kn-7aL" secondAttribute="trailing" id="dCF-NR-OOD"/>
+                                            <constraint firstItem="Lcc-Kn-7aL" firstAttribute="top" secondItem="4rV-Fs-cOX" secondAttribute="top" id="m5y-fB-yOG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccI-kU-Axu">
+                                        <rect key="frame" x="10" y="245" width="394" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 y.o." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-WA-YXM">
+                                        <rect key="frame" x="10" y="272" width="394" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="4rV-Fs-cOX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iPx-pD-18O" secondAttribute="top" constant="10" id="2mD-PJ-gu7"/>
+                                    <constraint firstItem="ccI-kU-Axu" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" constant="10" id="2v4-ON-Mhb"/>
+                                    <constraint firstAttribute="bottom" secondItem="SbQ-jA-IzP" secondAttribute="bottom" id="FWX-ER-8tX"/>
+                                    <constraint firstItem="ccI-kU-Axu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4rV-Fs-cOX" secondAttribute="bottom" constant="5" id="JJs-Sk-ffv"/>
+                                    <constraint firstItem="QO9-WA-YXM" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" constant="10" id="OY3-vs-m2d"/>
+                                    <constraint firstItem="SbQ-jA-IzP" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" id="Q95-nI-7f7"/>
+                                    <constraint firstAttribute="trailing" secondItem="SbQ-jA-IzP" secondAttribute="trailing" id="Srg-e4-B7m"/>
+                                    <constraint firstItem="LAs-gp-i1i" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" id="UUz-51-NvY"/>
+                                    <constraint firstItem="SbQ-jA-IzP" firstAttribute="top" secondItem="iPx-pD-18O" secondAttribute="top" id="VSi-gH-WAo"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QO9-WA-YXM" secondAttribute="bottom" constant="5" id="Y1K-J8-Pgt"/>
+                                    <constraint firstItem="LAs-gp-i1i" firstAttribute="top" secondItem="iPx-pD-18O" secondAttribute="top" id="ZwU-9W-ceB"/>
+                                    <constraint firstAttribute="trailing" secondItem="LAs-gp-i1i" secondAttribute="trailing" id="ajZ-8W-qPT"/>
+                                    <constraint firstItem="4rV-Fs-cOX" firstAttribute="height" secondItem="SbQ-jA-IzP" secondAttribute="height" multiplier="0.5" id="beI-XR-uBF"/>
+                                    <constraint firstAttribute="trailing" secondItem="QO9-WA-YXM" secondAttribute="trailing" constant="10" id="diP-rK-Dqe"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="hHf-yt-Gh4"/>
+                                    <constraint firstItem="QO9-WA-YXM" firstAttribute="top" secondItem="ccI-kU-Axu" secondAttribute="bottom" constant="5" id="hra-lw-6YF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ccI-kU-Axu" secondAttribute="trailing" constant="10" id="q6e-SG-9VS"/>
+                                    <constraint firstAttribute="bottom" secondItem="LAs-gp-i1i" secondAttribute="bottom" id="skC-UN-L4x"/>
+                                    <constraint firstItem="4rV-Fs-cOX" firstAttribute="centerX" secondItem="iPx-pD-18O" secondAttribute="centerX" id="t3y-kr-5tR"/>
+                                    <constraint firstItem="4rV-Fs-cOX" firstAttribute="centerY" secondItem="iPx-pD-18O" secondAttribute="centerY" priority="500" id="tFS-Qw-62c"/>
+                                    <constraint firstItem="ccI-kU-Axu" firstAttribute="top" secondItem="4rV-Fs-cOX" secondAttribute="bottom" priority="999" constant="20" id="yOK-KS-Woh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiw-u2-q4Z" userLabel="shadowView">
+                                <rect key="frame" x="0.0" y="300" width="414" height="10"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="etY-eq-qdp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="WFP-It-HSY"/>
+                        <constraints>
+                            <constraint firstItem="iPx-pD-18O" firstAttribute="leading" secondItem="ASU-3M-wnc" secondAttribute="leading" id="5Va-JL-hRj"/>
+                            <constraint firstAttribute="trailing" secondItem="xiw-u2-q4Z" secondAttribute="trailing" id="G6D-Yy-VR1"/>
+                            <constraint firstAttribute="trailing" secondItem="iPx-pD-18O" secondAttribute="trailing" id="OMh-e7-VMS"/>
+                            <constraint firstItem="xiw-u2-q4Z" firstAttribute="leading" secondItem="ASU-3M-wnc" secondAttribute="leading" id="PES-2j-s3F"/>
+                            <constraint firstItem="iPx-pD-18O" firstAttribute="top" secondItem="ASU-3M-wnc" secondAttribute="top" id="Pca-zA-4ZT"/>
+                            <constraint firstItem="iPx-pD-18O" firstAttribute="height" secondItem="ASU-3M-wnc" secondAttribute="height" multiplier="0.4" priority="999" id="YWI-5l-7Wv"/>
+                            <constraint firstItem="xiw-u2-q4Z" firstAttribute="top" secondItem="iPx-pD-18O" secondAttribute="bottom" id="p2T-6T-f8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ypt-Ec-IO3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="hKb-zy-Yuv"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="hKb-zy-Yuv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="profileContainerView" destination="4rV-Fs-cOX" id="ZiX-Xi-3DM"/>
+                        <outlet property="profileImageView" destination="Lcc-Kn-7aL" id="TKI-9f-gt2"/>
+                        <outlet property="userNameLabel" destination="ccI-kU-Axu" id="D03-Mt-ndn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM2-Oc-J2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="346" y="-299"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="auth" width="3000" height="4500"/>
+        <image name="handsome_guy" width="488" height="405"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
