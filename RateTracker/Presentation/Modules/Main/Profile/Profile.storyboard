@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
         </array>
@@ -59,24 +62,36 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 y.o." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-WA-YXM">
+                                        <rect key="frame" x="10" y="272" width="394" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="4rV-Fs-cOX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iPx-pD-18O" secondAttribute="top" constant="10" id="2mD-PJ-gu7"/>
                                     <constraint firstItem="ccI-kU-Axu" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" constant="10" id="2v4-ON-Mhb"/>
                                     <constraint firstAttribute="bottom" secondItem="SbQ-jA-IzP" secondAttribute="bottom" id="FWX-ER-8tX"/>
+                                    <constraint firstItem="ccI-kU-Axu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4rV-Fs-cOX" secondAttribute="bottom" constant="5" id="JJs-Sk-ffv"/>
+                                    <constraint firstItem="QO9-WA-YXM" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" constant="10" id="OY3-vs-m2d"/>
                                     <constraint firstItem="SbQ-jA-IzP" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" id="Q95-nI-7f7"/>
                                     <constraint firstAttribute="trailing" secondItem="SbQ-jA-IzP" secondAttribute="trailing" id="Srg-e4-B7m"/>
                                     <constraint firstItem="LAs-gp-i1i" firstAttribute="leading" secondItem="iPx-pD-18O" secondAttribute="leading" id="UUz-51-NvY"/>
                                     <constraint firstItem="SbQ-jA-IzP" firstAttribute="top" secondItem="iPx-pD-18O" secondAttribute="top" id="VSi-gH-WAo"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QO9-WA-YXM" secondAttribute="bottom" constant="5" id="Y1K-J8-Pgt"/>
                                     <constraint firstItem="LAs-gp-i1i" firstAttribute="top" secondItem="iPx-pD-18O" secondAttribute="top" id="ZwU-9W-ceB"/>
                                     <constraint firstAttribute="trailing" secondItem="LAs-gp-i1i" secondAttribute="trailing" id="ajZ-8W-qPT"/>
                                     <constraint firstItem="4rV-Fs-cOX" firstAttribute="height" secondItem="SbQ-jA-IzP" secondAttribute="height" multiplier="0.5" id="beI-XR-uBF"/>
+                                    <constraint firstAttribute="trailing" secondItem="QO9-WA-YXM" secondAttribute="trailing" constant="10" id="diP-rK-Dqe"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="hHf-yt-Gh4"/>
+                                    <constraint firstItem="QO9-WA-YXM" firstAttribute="top" secondItem="ccI-kU-Axu" secondAttribute="bottom" constant="5" id="hra-lw-6YF"/>
                                     <constraint firstAttribute="trailing" secondItem="ccI-kU-Axu" secondAttribute="trailing" constant="10" id="q6e-SG-9VS"/>
                                     <constraint firstAttribute="bottom" secondItem="LAs-gp-i1i" secondAttribute="bottom" id="skC-UN-L4x"/>
                                     <constraint firstItem="4rV-Fs-cOX" firstAttribute="centerX" secondItem="iPx-pD-18O" secondAttribute="centerX" id="t3y-kr-5tR"/>
-                                    <constraint firstItem="4rV-Fs-cOX" firstAttribute="centerY" secondItem="iPx-pD-18O" secondAttribute="centerY" id="tFS-Qw-62c"/>
-                                    <constraint firstItem="ccI-kU-Axu" firstAttribute="top" secondItem="4rV-Fs-cOX" secondAttribute="bottom" constant="20" id="yOK-KS-Woh"/>
+                                    <constraint firstItem="4rV-Fs-cOX" firstAttribute="centerY" secondItem="iPx-pD-18O" secondAttribute="centerY" priority="500" id="tFS-Qw-62c"/>
+                                    <constraint firstItem="ccI-kU-Axu" firstAttribute="top" secondItem="4rV-Fs-cOX" secondAttribute="bottom" priority="999" constant="20" id="yOK-KS-Woh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiw-u2-q4Z" userLabel="shadowView">
