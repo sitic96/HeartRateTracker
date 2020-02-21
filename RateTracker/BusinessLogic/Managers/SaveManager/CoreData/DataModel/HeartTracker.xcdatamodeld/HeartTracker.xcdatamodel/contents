@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CoreHeartData" representedClassName="CoreHeartData" syncable="YES" codeGenerationType="category">
         <attribute name="bpm" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rrValues" attributeType="Transformable" customClassName="[Double]"/>
@@ -14,20 +14,8 @@
         <attribute name="startedAt" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="heartData" toMany="YES" deletionRule="Nullify" destinationEntity="CoreHeartData" inverseName="scan" inverseEntity="CoreHeartData"/>
     </entity>
-    <entity name="CoreUser" representedClassName="CoreUser" syncable="YES" codeGenerationType="category">
-        <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="email" attributeType="String"/>
-        <attribute name="fbUid" attributeType="String"/>
-        <attribute name="name" attributeType="String"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="fbUid"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
-    </entity>
     <elements>
         <element name="CoreHeartData" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="CoreHeartScan" positionX="-54" positionY="18" width="128" height="133"/>
-        <element name="CoreUser" positionX="-45" positionY="72" width="128" height="103"/>
     </elements>
 </model>

@@ -17,7 +17,7 @@ class AuthCoordinator: Coordinator {
         super.init()
         let vc = AuthViewController.instantiateViewController(storyboardId: AuthViewController.storyboardIdentifier)
         vc.viewModel = AuthViewModel(coordinator: self,
-                                     userSaveManager: UserSaveManager(coreData: CoreDataManager.shared))
+                                     userSaveManager: UserSaveManager())
         pushViewController(vc, animated: false)
     }
     

@@ -11,7 +11,7 @@ import UIKit
 class MainTabBarController: UITabBarController {
 
     private lazy var profileViewModel: ProfileViewModelProtocol = {
-        return ProfileViewModel()
+        return ProfileViewModel(userSaveManager: UserSaveManager())
     }()
 
     override func viewDidLoad() {
