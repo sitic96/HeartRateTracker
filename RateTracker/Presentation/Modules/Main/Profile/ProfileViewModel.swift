@@ -16,7 +16,6 @@ protocol ProfileViewModelProtocol {
     var didUpdateUserInfo: (() -> Void )? { get set }
     
     func viewWillAppear()
-    func viewDidAppear()
 }
 
 class ProfileViewModel {
@@ -25,15 +24,10 @@ class ProfileViewModel {
     private var user: User?
     
     var didUpdateUserInfo: (() -> Void )?
-
+    
     init(userSaveManager: UserSaveManagerProtocol) {
         ref = Database.database().reference()
         self.userSaveManager = userSaveManager
-    }
-    
-    private func setupUser() {
-        user = userSaveManager.user()
-        didUpdateUserInfo?()
     }
 }
 
@@ -52,10 +46,8 @@ extension ProfileViewModel: ProfileViewModelProtocol {
     }
     
     func viewWillAppear() {
-        setupUser()
+        user = userSaveManager.user()
+        didUpdateUserInfo?()
     }
     
-    func viewDidAppear() {
-        setupUser()
-    }
 }

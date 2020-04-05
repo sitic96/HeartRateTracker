@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DF16CB60A580493FC6313CE /* libPods-RateTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86B9577E7CED54B512058A /* libPods-RateTracker.a */; };
 		4902036A22CA4D1A00561120 /* UIViewController+customAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902036922CA4D1A00561120 /* UIViewController+customAlert.swift */; };
 		4916B71623BC9E6D00B601AF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4916B71523BC9E6D00B601AF /* AuthViewModel.swift */; };
 		4916B71A23BCA1D800B601AF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4916B71923BCA1D800B601AF /* Localizable.swift */; };
@@ -87,11 +88,12 @@
 		7223640D2201D97E009AD1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7223640B2201D97E009AD1E9 /* LaunchScreen.storyboard */; };
 		724B13F5243A0FF400902868 /* FirebaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B13F4243A0FF400902868 /* FirebaseKeys.swift */; };
 		724B13F8243A180600902868 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B13F7243A180600902868 /* ConfigurationManager.swift */; };
-		B0D0A6BA517BC28C274BD773 /* Pods_RateTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD8D3DB04642742A3544C47 /* Pods_RateTracker.framework */; };
+		724B13FB243A1B6400902868 /* RecordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B13FA243A1B6400902868 /* RecordViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B8EBD2DC6868FA92751C40A /* Pods-RateTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateTracker.debug.xcconfig"; path = "Target Support Files/Pods-RateTracker/Pods-RateTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		3A86B9577E7CED54B512058A /* libPods-RateTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RateTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4902036922CA4D1A00561120 /* UIViewController+customAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+customAlert.swift"; sourceTree = "<group>"; };
 		4916B71523BC9E6D00B601AF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		4916B71923BCA1D800B601AF /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -176,8 +178,8 @@
 		7223640E2201D97E009AD1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		724B13F4243A0FF400902868 /* FirebaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKeys.swift; sourceTree = "<group>"; };
 		724B13F7243A180600902868 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		724B13FA243A1B6400902868 /* RecordViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewCell.swift; sourceTree = "<group>"; };
 		A19C1B7492ABFA62DA911C66 /* Pods-RateTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateTracker.release.xcconfig"; path = "Target Support Files/Pods-RateTracker/Pods-RateTracker.release.xcconfig"; sourceTree = "<group>"; };
-		EAD8D3DB04642742A3544C47 /* Pods_RateTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4972A67D22CCBEC0007971E2 /* CoreData.framework in Frameworks */,
-				B0D0A6BA517BC28C274BD773 /* Pods_RateTracker.framework in Frameworks */,
+				0DF16CB60A580493FC6313CE /* libPods-RateTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +495,7 @@
 		49D0B93923E2F2D2007E38B6 /* PastRecords */ = {
 			isa = PBXGroup;
 			children = (
+				724B13F9243A1B4B00902868 /* RecordView */,
 				49D0B94223E2F808007E38B6 /* PastRecords.storyboard */,
 				49D0B94423E2F8C9007E38B6 /* PastRecordsViewController.swift */,
 				49D0B94623E2F912007E38B6 /* PastRecordsViewModel.swift */,
@@ -594,11 +597,19 @@
 			path = ConfigurationManager;
 			sourceTree = "<group>";
 		};
+		724B13F9243A1B4B00902868 /* RecordView */ = {
+			isa = PBXGroup;
+			children = (
+				724B13FA243A1B6400902868 /* RecordViewCell.swift */,
+			);
+			path = RecordView;
+			sourceTree = "<group>";
+		};
 		AA2A4F48A60C1753723E1391 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4972A67C22CCBEBF007971E2 /* CoreData.framework */,
-				EAD8D3DB04642742A3544C47 /* Pods_RateTracker.framework */,
+				3A86B9577E7CED54B512058A /* libPods-RateTracker.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -623,7 +634,6 @@
 				722363FB2201D97C009AD1E9 /* Sources */,
 				722363FC2201D97C009AD1E9 /* Frameworks */,
 				722363FD2201D97C009AD1E9 /* Resources */,
-				931C062575E00DF67F5B8984 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -732,23 +742,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		931C062575E00DF67F5B8984 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RateTracker/Pods-RateTracker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -789,6 +782,7 @@
 				49B8122423D86D9A00693EEC /* OptionButton.swift in Sources */,
 				49537516239AFB80009F4099 /* UIView+border.swift in Sources */,
 				49235D1623E98FFE00990A38 /* CoreHeartData.swift in Sources */,
+				724B13FB243A1B6400902868 /* RecordViewCell.swift in Sources */,
 				4916B71C23BCA6A900B601AF /* AuthCoordinator.swift in Sources */,
 				495374E5239AD7D9009F4099 /* User.swift in Sources */,
 				49DA697723D31196008E0AC8 /* Coordinator.swift in Sources */,
