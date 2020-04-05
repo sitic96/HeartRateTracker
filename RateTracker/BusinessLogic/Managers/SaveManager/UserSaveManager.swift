@@ -23,7 +23,9 @@ class UserSaveManager {
 
 extension UserSaveManager: UserSaveManagerProtocol {
     func user() -> User? {
-        let decoded = UserDefaults.standard.object(forKey: key) as! Data
+        guard let decoded = UserDefaults.standard.object(forKey: key) as? Data else {
+            return nil
+        }
         return NSKeyedUnarchiver.unarchiveObject(with: decoded) as? User
     }
     

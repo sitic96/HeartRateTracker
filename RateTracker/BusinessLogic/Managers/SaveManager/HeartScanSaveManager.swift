@@ -19,10 +19,11 @@ protocol HeartScanSaveManagerProtocol {
 }
 
 class HeartScanSaveManager: SaveManager {
+    static var shared = HeartScanSaveManager()
     private let coreData: CoreDataManagerProtocol
     
-    init(coreData: CoreDataManagerProtocol) {
-        self.coreData = coreData
+    private override init() {
+        self.coreData = CoreDataManager.shared
     }
     
     private func fetch(predicate: NSPredicate? = nil) -> [HeartScan] {

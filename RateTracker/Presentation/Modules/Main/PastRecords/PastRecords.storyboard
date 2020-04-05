@@ -15,7 +15,50 @@
                     <view key="view" contentMode="scaleToFill" id="GDL-8C-Qjc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-T1-V0R">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordViewCell" id="sPd-wD-LUb" customClass="RecordViewCell" customModule="RateTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sPd-wD-LUb" id="ypk-WF-agn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liC-us-eNI">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="liC-us-eNI" secondAttribute="trailing" id="TlK-j4-EsP"/>
+                                                <constraint firstItem="liC-us-eNI" firstAttribute="top" secondItem="ypk-WF-agn" secondAttribute="topMargin" id="W1R-O5-CtV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="liC-us-eNI" secondAttribute="bottom" id="f5y-61-IdC"/>
+                                                <constraint firstItem="liC-us-eNI" firstAttribute="leading" secondItem="ypk-WF-agn" secondAttribute="leadingMargin" id="jUH-gQ-rls"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="liC-us-eNI" id="upT-W0-jlM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oV7-Nm-cTn" id="Zit-4j-Bzr"/>
+                                    <outlet property="delegate" destination="oV7-Nm-cTn" id="vsg-T5-EEM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IGL-T1-V0R" firstAttribute="top" secondItem="NEh-qE-BTr" secondAttribute="top" id="C9j-i6-aJt"/>
+                            <constraint firstItem="IGL-T1-V0R" firstAttribute="leading" secondItem="NEh-qE-BTr" secondAttribute="leading" id="JDY-A6-ccn"/>
+                            <constraint firstItem="NEh-qE-BTr" firstAttribute="bottom" secondItem="IGL-T1-V0R" secondAttribute="bottom" id="fZP-dg-AWw"/>
+                            <constraint firstItem="NEh-qE-BTr" firstAttribute="trailing" secondItem="IGL-T1-V0R" secondAttribute="trailing" id="yyY-tZ-Ji5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NEh-qE-BTr"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="tray" catalog="system" id="Bnj-Ta-NxY"/>
