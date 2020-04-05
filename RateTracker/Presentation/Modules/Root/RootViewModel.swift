@@ -15,15 +15,17 @@ protocol RootViewModelProtocol {
 
 class RootViewModel {
     private weak var coordinator: RootCoordinatorProtocol?
+    private let configurationManager: ConfigurationManagerProtocol
 
     init(coordinator: RootCoordinatorProtocol) {
         self.coordinator = coordinator
+        self.configurationManager = ConfigurationManager.shared
     }
 }
 
 extension RootViewModel: RootViewModelProtocol {
     func viewDidAppear() {
-        if Auth.auth().currentUser != nil {
+        if Auth.auth().currentUser != nil || configurationManager.isAnonMode {
             coordinator?.showMainView()
         } else {
             coordinator?.showAuthView()

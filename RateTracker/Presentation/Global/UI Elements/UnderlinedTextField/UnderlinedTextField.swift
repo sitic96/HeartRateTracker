@@ -9,7 +9,7 @@
 import UIKit
 
 class UnderlinedTextField: UIView, NibLoadable {
-    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField!
 
     @IBInspectable var shouldHideText: Bool = false {
         didSet {
@@ -22,7 +22,7 @@ class UnderlinedTextField: UIView, NibLoadable {
             self.textField.placeholder = placeholder
         }
     }
-
+    
     var text: String? {
         return textField.text
     }

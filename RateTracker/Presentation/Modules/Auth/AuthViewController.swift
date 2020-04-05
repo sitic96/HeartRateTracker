@@ -34,6 +34,8 @@ class AuthViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet private var loginErrorLabelHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var signupErrorLabelHeightConstraint: NSLayoutConstraint!
 
+    private var currentResponder: UITextField?
+
 
     var viewModel: AuthViewModelProtocol!
     private var shownPage: ShownPage = .login
@@ -41,6 +43,13 @@ class AuthViewController: UIViewController, StoryboardInstantiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        nameSignUpTextView.textField.delegate = self
+        emailSignUpTextField.textField.delegate = self
+        passwordSignUpTextField.textField.delegate = self
+        emailLoginTextField.textField.delegate = self
+        passwordLoginTextField.textField.delegate = self
         bindViewModel()
     }
 
@@ -51,6 +60,10 @@ class AuthViewController: UIViewController, StoryboardInstantiable {
         viewModel.isLoading
         .bind(to: self.loginRTButton.rx.isLoading)
         .disposed(by: bag)
+    }
+
+    @objc private func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        currentResponder?.resignFirstResponder()
     }
 
     // MARK: - IBAction
@@ -83,6 +96,17 @@ class AuthViewController: UIViewController, StoryboardInstantiable {
     }
 
     // MARK: - Private
+}
+
+extension AuthViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.currentResponder = textField
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 fileprivate extension Const {
