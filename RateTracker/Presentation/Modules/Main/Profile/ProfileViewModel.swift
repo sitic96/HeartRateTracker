@@ -10,18 +10,52 @@ import Foundation
 import Firebase
 
 protocol ProfileViewModelProtocol {
+    var name: String { get }
+    var age: String { get }
+    
+    var didUpdateUserInfo: (() -> Void )? { get set }
+    
+    func viewWillAppear()
     func viewDidAppear()
 }
 
 class ProfileViewModel {
+    private let userSaveManager: UserSaveManagerProtocol
     private var ref: DatabaseReference!
+    private var user: User?
+    
+    var didUpdateUserInfo: (() -> Void )?
 
-    init() {
+    init(userSaveManager: UserSaveManagerProtocol) {
         ref = Database.database().reference()
+        self.userSaveManager = userSaveManager
+    }
+    
+    private func setupUser() {
+        user = userSaveManager.user()
+        didUpdateUserInfo?()
     }
 }
 
 extension ProfileViewModel: ProfileViewModelProtocol {
+    var name: String {
+        return user?.name ?? ""
+    }
+    
+    var age: String {
+        if let user = user,
+            let birthDate = user.birthDate {
+            return "\(Calendar.current.dateComponents([.year], from: birthDate, to: Date()).year!) y.o."
+        } else {
+            return ""
+        }
+    }
+    
+    func viewWillAppear() {
+        setupUser()
+    }
+    
     func viewDidAppear() {
+        setupUser()
     }
 }

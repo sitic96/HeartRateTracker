@@ -11,48 +11,28 @@ import CoreData
 
 protocol UserSaveManagerProtocol {
     func user() -> User?
-    func edit(with newUserData: User, completion: @escaping SaveManagerCompletion)
-    func delete(completion: @escaping SaveManagerCompletion)
+    func edit(with newUserData: User)
+    func delete()
 }
 
 class UserSaveManager {
-    private let coreData: CoreDataManagerProtocol
+    private let key = "userInfo"
     
-    init(coreData: CoreDataManagerProtocol) {
-        self.coreData = coreData
-    }
+    init() { }
 }
 
 extension UserSaveManager: UserSaveManagerProtocol {
     func user() -> User? {
-        do {
-            let coreUser: [CoreUser] =
-                try coreData.fetchData(CoreUser.entityName, predicate: nil)
-            return coreUser.first?.toUser()
-        } catch _ {
-            return nil
-        }
+        let decoded = UserDefaults.standard.object(forKey: key) as! Data
+        return NSKeyedUnarchiver.unarchiveObject(with: decoded) as? User
     }
     
-    func edit(with newUserData: User, completion: @escaping SaveManagerCompletion) {
-        let context = coreData.container.newBackgroundContext()
-        context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        do {
-            try CoreUser(from: newUserData, in: context)
-            try context.save()
-            completion(.success(Void()))
-        } catch let error {
-            completion(.failure(error))
-        }
+    func edit(with newUserData: User) {
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: newUserData)
+        UserDefaults.standard.set(encodedData, forKey: key)
     }
     
-    func delete(completion: @escaping SaveManagerCompletion) {
-        let context = coreData.container.newBackgroundContext()
-        do {
-            try coreData.deleteAllObjects(in: context)
-            completion(.success(Void()))
-        } catch let error {
-            completion(.failure(error))
-        }
+    func delete() {
+        UserDefaults.standard.removeObject(forKey: key)
     }
 }

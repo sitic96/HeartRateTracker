@@ -25,7 +25,6 @@ class AuthViewModel {
     private let userSaveManager: UserSaveManagerProtocol
     private var ref: DatabaseReference!
     var isLoading = BehaviorRelay(value: false)
-    var errorMessage = BehaviorRelay(value: "")
     
     init(coordinator: AuthCoordinatorProtocol,
          userSaveManager: UserSaveManagerProtocol) {
@@ -54,6 +53,19 @@ extension AuthViewModel: AuthViewModelProtocol {
             if let error = error {
                 strongSelf.coordinator?.showError(errorMessage: error.localizedDescription)
             } else {
+                let userID = Auth.auth().currentUser!.uid
+                strongSelf.ref.child(FirebaseKeys.Users.usersTableName)
+                    .child(userID).observeSingleEvent(of: .value, with: { snapshot in
+                        let data = (snapshot.value as? NSDictionary)
+                        let name = data?[FirebaseKeys.Users.name] as? String ?? ""
+                        let birthDate = data?[FirebaseKeys.Users.birthDate] as? Date
+
+                        strongSelf.userSaveManager.edit(with: User(id: userID, name: name,
+                                                                   email: email, birthDate: birthDate))
+                    }) { error in
+                    print(error.localizedDescription)
+                }
+                
                 strongSelf.coordinator?.showMainController()
             }
         }
@@ -66,7 +78,7 @@ extension AuthViewModel: AuthViewModelProtocol {
             !password.isEmpty,
             let name = name,
             !name.isEmpty else {
-                coordinator?.showError(errorMessage: "Email or password is empty")
+                coordinator?.showError(errorMessage: LocalizableKeys.emptyLoginFields.localized)
                 return
         }
         isLoading.accept(true)
@@ -79,17 +91,11 @@ extension AuthViewModel: AuthViewModelProtocol {
                 strongSelf.coordinator?.showError(errorMessage: error.localizedDescription)
             } else {
                 let userID = Auth.auth().currentUser!.uid
-                strongSelf.ref.child("users").child(userID).setValue(["name": name,
-                                                                      "email": email])
+                strongSelf.ref.child(FirebaseKeys.Users.usersTableName)
+                    .child(userID).setValue([FirebaseKeys.Users.name: name,
+                                             FirebaseKeys.Users.email: email])
                 strongSelf.userSaveManager.edit(with: User(id: userID, name: name,
-                                                           email: email, birthDate: nil)) { result in
-                                                            switch result {
-                                                            case .success:
-                                                                strongSelf.coordinator?.showMainController()
-                                                            case .failure(let saveError):
-                                                                print(saveError.localizedDescription)
-                                                            }
-                }
+                                                           email: email, birthDate: nil))
             }
         }
     }
