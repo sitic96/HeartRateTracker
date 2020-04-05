@@ -86,6 +86,7 @@
 		7223640A2201D97E009AD1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722364092201D97E009AD1E9 /* Assets.xcassets */; };
 		7223640D2201D97E009AD1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7223640B2201D97E009AD1E9 /* LaunchScreen.storyboard */; };
 		724B13F5243A0FF400902868 /* FirebaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B13F4243A0FF400902868 /* FirebaseKeys.swift */; };
+		724B13F8243A180600902868 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B13F7243A180600902868 /* ConfigurationManager.swift */; };
 		B0D0A6BA517BC28C274BD773 /* Pods_RateTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD8D3DB04642742A3544C47 /* Pods_RateTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +175,7 @@
 		7223640C2201D97E009AD1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7223640E2201D97E009AD1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		724B13F4243A0FF400902868 /* FirebaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKeys.swift; sourceTree = "<group>"; };
+		724B13F7243A180600902868 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		A19C1B7492ABFA62DA911C66 /* Pods-RateTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateTracker.release.xcconfig"; path = "Target Support Files/Pods-RateTracker/Pods-RateTracker.release.xcconfig"; sourceTree = "<group>"; };
 		EAD8D3DB04642742A3544C47 /* Pods_RateTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -280,6 +282,7 @@
 		49447FE022C630CA00F689C5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				724B13F6243A17EE00902868 /* ConfigurationManager */,
 				49D0B94D23E4295D007E38B6 /* HeartManager */,
 				49D0B94823E30E19007E38B6 /* BluetoothManager */,
 				49235D1B23E9994A00990A38 /* SaveManager */,
@@ -583,6 +586,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		724B13F6243A17EE00902868 /* ConfigurationManager */ = {
+			isa = PBXGroup;
+			children = (
+				724B13F7243A180600902868 /* ConfigurationManager.swift */,
+			);
+			path = ConfigurationManager;
+			sourceTree = "<group>";
+		};
 		AA2A4F48A60C1753723E1391 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +759,7 @@
 				4916B72723BCE7B000B601AF /* AppCoordinator.swift in Sources */,
 				49447FDF22C6271400F689C5 /* UIViewController+loadFromNib.swift in Sources */,
 				49DA698223D3137A008E0AC8 /* RootCoordinator.swift in Sources */,
+				724B13F8243A180600902868 /* ConfigurationManager.swift in Sources */,
 				49B8121F23D86B9500693EEC /* AlertViewModel.swift in Sources */,
 				49D0B94C23E31E06007E38B6 /* SensorPosition.swift in Sources */,
 				49235D1D23E9996C00990A38 /* HeartScanSaveManager.swift in Sources */,

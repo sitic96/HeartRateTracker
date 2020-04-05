@@ -32,7 +32,6 @@ class AuthViewModel {
         self.userSaveManager = userSaveManager
         ref = Database.database().reference()
     }
-    
 }
 
 extension AuthViewModel: AuthViewModelProtocol {
@@ -96,11 +95,20 @@ extension AuthViewModel: AuthViewModelProtocol {
                                              FirebaseKeys.Users.email: email])
                 strongSelf.userSaveManager.edit(with: User(id: userID, name: name,
                                                            email: email, birthDate: nil))
+                strongSelf.coordinator?.showMainController()
             }
         }
     }
     
     func viewDidSelectSkip() {
+        userSaveManager.edit(with: User.anonUser())
+        ConfigurationManager.shared.isAnonMode = true
         coordinator?.showMainController()
+    }
+}
+
+fileprivate extension User {
+    static func anonUser() -> User {
+        return User.init(id: "", name: "Anon", email: "", birthDate: nil)
     }
 }
