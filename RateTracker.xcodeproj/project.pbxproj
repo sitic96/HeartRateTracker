@@ -85,6 +85,7 @@
 		722364032201D97C009AD1E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722364022201D97C009AD1E9 /* AppDelegate.swift */; };
 		7223640A2201D97E009AD1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722364092201D97E009AD1E9 /* Assets.xcassets */; };
 		7223640D2201D97E009AD1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7223640B2201D97E009AD1E9 /* LaunchScreen.storyboard */; };
+		724B13F5243A0FF400902868 /* FirebaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B13F4243A0FF400902868 /* FirebaseKeys.swift */; };
 		B0D0A6BA517BC28C274BD773 /* Pods_RateTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD8D3DB04642742A3544C47 /* Pods_RateTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,7 @@
 		722364092201D97E009AD1E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7223640C2201D97E009AD1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7223640E2201D97E009AD1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		724B13F4243A0FF400902868 /* FirebaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKeys.swift; sourceTree = "<group>"; };
 		A19C1B7492ABFA62DA911C66 /* Pods-RateTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateTracker.release.xcconfig"; path = "Target Support Files/Pods-RateTracker/Pods-RateTracker.release.xcconfig"; sourceTree = "<group>"; };
 		EAD8D3DB04642742A3544C47 /* Pods_RateTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -469,6 +471,7 @@
 			children = (
 				49C2146722C4EFA1004A1560 /* StoryboardHelper.swift */,
 				49447FD322C5168B00F689C5 /* EmailValidator.swift */,
+				724B13F4243A0FF400902868 /* FirebaseKeys.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				4916B72523BCE1E600B601AF /* RTButton.swift in Sources */,
 				49235DAD23ED8C3C00990A38 /* UserSaveManager.swift in Sources */,
 				49235DA723EC3ECD00990A38 /* ProfileViewModel.swift in Sources */,
+				724B13F5243A0FF400902868 /* FirebaseKeys.swift in Sources */,
 				4916B71A23BCA1D800B601AF /* Localizable.swift in Sources */,
 				49B8122623D86DE600693EEC /* Palette.swift in Sources */,
 				49DA697E23D31307008E0AC8 /* RootViewModel.swift in Sources */,

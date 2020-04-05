@@ -25,7 +25,6 @@ class AuthViewModel {
     private let userSaveManager: UserSaveManagerProtocol
     private var ref: DatabaseReference!
     var isLoading = BehaviorRelay(value: false)
-    var errorMessage = BehaviorRelay(value: "")
     
     init(coordinator: AuthCoordinatorProtocol,
          userSaveManager: UserSaveManagerProtocol) {
@@ -55,17 +54,17 @@ extension AuthViewModel: AuthViewModelProtocol {
                 strongSelf.coordinator?.showError(errorMessage: error.localizedDescription)
             } else {
                 let userID = Auth.auth().currentUser!.uid
-                strongSelf.ref.child("users").child(userID).observeSingleEvent(of: .value, with: { snapshot in
-                    let data = (snapshot.value as? NSDictionary)
-                    let name = data?["name"] as? String ?? ""
-                    let birthDate = data?["birthDate"] as? Date
-                    
-                    strongSelf.userSaveManager.edit(with: User(id: userID, name: name,
-                                                               email: email, birthDate: birthDate))
-                }) { error in
+                strongSelf.ref.child(FirebaseKeys.Users.usersTableName)
+                    .child(userID).observeSingleEvent(of: .value, with: { snapshot in
+                        let data = (snapshot.value as? NSDictionary)
+                        let name = data?[FirebaseKeys.Users.name] as? String ?? ""
+                        let birthDate = data?[FirebaseKeys.Users.birthDate] as? Date
+
+                        strongSelf.userSaveManager.edit(with: User(id: userID, name: name,
+                                                                   email: email, birthDate: birthDate))
+                    }) { error in
                     print(error.localizedDescription)
                 }
-                
                 
                 strongSelf.coordinator?.showMainController()
             }
@@ -92,8 +91,9 @@ extension AuthViewModel: AuthViewModelProtocol {
                 strongSelf.coordinator?.showError(errorMessage: error.localizedDescription)
             } else {
                 let userID = Auth.auth().currentUser!.uid
-                strongSelf.ref.child("users").child(userID).setValue(["name": name,
-                                                                      "email": email])
+                strongSelf.ref.child(FirebaseKeys.Users.usersTableName)
+                    .child(userID).setValue([FirebaseKeys.Users.name: name,
+                                             FirebaseKeys.Users.email: email])
                 strongSelf.userSaveManager.edit(with: User(id: userID, name: name,
                                                            email: email, birthDate: nil))
             }
